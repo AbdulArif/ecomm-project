@@ -11,10 +11,10 @@
     <div class="seller-auth">
         <div class="signup">
             <h1 class="sign-up"> Seller Sign-Up</h1>
-            <form class="common-form">
-                <input class="form-input" type="text" placeholder="Enter Name">
-                <input class="form-input" type="password" placeholder="Enter password">
-                <input class="form-input" type="email" placeholder="Enter Email">
+            <form class="common-form"  [formGroup]="sellerForm" (ngSubmit)="onSubmit()">
+                <input class="form-input" type="text" placeholder="Enter Name" formControlName="name">
+                <input class="form-input" type="password" placeholder="Enter password" formControlName="password">
+                <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
                 <button class="form-button">Signup</button>
             </form>
         </div>
