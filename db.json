@@ -1,7 +1,40 @@
 {
-  "seller": {
-    "name": "Abdul Anis",
-    "email": "abdulanis.dgp@gmail.com",
-    "password": "Password@1"
-  }
+  "seller": [
+    {
+      "name": "Abdul Anis",
+      "email": "abdulanis.dgp@gmail.com",
+      "password": "Password@1",
+      "id": 1
+    },
+    {
+      "name": "Abdul Arif",
+      "password": "Password@1",
+      "email": "abdularif.dgp@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "a",
+      "password": "Password@1",
+      "email": "a@gmail.com",
+      "addedDate": "2022-10-30T14:27:27.353Z",
+      "updatedDate": "2022-10-30T14:27:27.353Z",
+      "id": 3
+    },
+    {
+      "name": "test",
+      "password": "Password@1",
+      "email": "abdularif.dgp@gmail.com",
+      "addedDate": "2022-10-30T14:39:15.248Z",
+      "updatedDate": "2022-10-30T14:39:15.248Z",
+      "id": 4
+    },
+    {
+      "name": "Test user",
+      "password": "Password@1",
+      "email": "user@gmail.com",
+      "addedDate": "2022-10-30T14:47:05.141Z",
+      "updatedDate": "2022-10-30T14:47:05.141Z",
+      "id": 5
+    }
+  ]
 }

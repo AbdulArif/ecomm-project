@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { SellerService } from '../sevices/seller.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-seller-auth',
@@ -14,6 +15,7 @@ export class SellerAuthComponent implements OnInit {
 
   constructor(
     private formBuilder: UntypedFormBuilder,
+    private router: Router,
     private sellerService: SellerService
   ) { }
 
@@ -30,15 +32,19 @@ export class SellerAuthComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
       email: ['', [Validators.required, Validators.email]],
       // addedBy: this.authenticationService.currentUserFirstName() + " " + this.authenticationService.currentUserLastName(),
-      // addedDate: this.todaysDate.toISOString(),
+      addedDate: this.todaysDate.toISOString(),
       // updatedBy: this.authenticationService.currentUserFirstName() + " " + this.authenticationService.currentUserLastName(),
-      // updatedDate: this.todaysDate.toISOString()
+      updatedDate: this.todaysDate.toISOString()
     });
   }
 
 
   onSubmit() {
-    console.log(this.sellerForm.value)
-    this.sellerService.userSignUp()
+    // console.log(this.sellerForm.value)
+    this.sellerService.userSignUp(this.sellerForm.value).subscribe((result) => {
+      if(result){
+        this.router.navigate(['seller-home'])
+      }
+    });
   }
 }
