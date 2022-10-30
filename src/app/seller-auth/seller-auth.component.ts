@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
+import { SellerService } from '../sevices/seller.service';
 
 @Component({
   selector: 'app-seller-auth',
@@ -13,6 +14,7 @@ export class SellerAuthComponent implements OnInit {
 
   constructor(
     private formBuilder: UntypedFormBuilder,
+    private sellerService: SellerService
   ) { }
 
   ngOnInit(): void {
@@ -37,5 +39,6 @@ export class SellerAuthComponent implements OnInit {
 
   onSubmit() {
     console.log(this.sellerForm.value)
+    this.sellerService.userSignUp()
   }
 }

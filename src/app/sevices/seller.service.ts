@@ -6,4 +6,7 @@ import { Injectable } from '@angular/core';
 export class SellerService {
 
   constructor() { }
+  userSignUp(){
+    console.warn("sevice call")
+  }
 }
