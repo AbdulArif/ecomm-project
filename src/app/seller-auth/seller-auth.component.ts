@@ -23,14 +23,14 @@ export class SellerAuthComponent implements OnInit {
 
   buildCreateSellerForm(): void {
     this.sellerForm = this.formBuilder.group({
-      sellerId: null,
+      // sellerId: null,
       name: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
       email: ['', [Validators.required, Validators.email]],
       // addedBy: this.authenticationService.currentUserFirstName() + " " + this.authenticationService.currentUserLastName(),
-      addedDate: this.todaysDate.toISOString(),
+      // addedDate: this.todaysDate.toISOString(),
       // updatedBy: this.authenticationService.currentUserFirstName() + " " + this.authenticationService.currentUserLastName(),
-      updatedDate: this.todaysDate.toISOString()
+      // updatedDate: this.todaysDate.toISOString()
     });
   }
 
