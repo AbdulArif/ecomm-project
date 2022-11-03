@@ -75,6 +75,38 @@
       "addedDate": "2022-11-03T16:31:42.709Z",
       "updatedDate": "2022-11-03T16:31:42.709Z",
       "id": 10
+    },
+    {
+      "name": "A",
+      "password": "Password@1",
+      "email": "abdularif.dgp@gmail.com",
+      "addedDate": "2022-11-03T16:55:28.023Z",
+      "updatedDate": "2022-11-03T16:55:28.023Z",
+      "id": 11
+    },
+    {
+      "name": "Abdul Arid",
+      "password": "PAsword@!",
+      "email": "abdularif.dgp@gmail.com",
+      "addedDate": "2022-11-03T17:21:12.996Z",
+      "updatedDate": "2022-11-03T17:21:12.996Z",
+      "id": 12
+    },
+    {
+      "name": "a",
+      "password": "Password@!",
+      "email": "abdularif.dgp@gmail.com",
+      "addedDate": "2022-11-03T17:26:44.878Z",
+      "updatedDate": "2022-11-03T17:26:44.878Z",
+      "id": 13
+    },
+    {
+      "name": "arif",
+      "password": "Password@1",
+      "email": "abdularif.dgp@gmail.com",
+      "addedDate": "2022-11-03T17:27:25.696Z",
+      "updatedDate": "2022-11-03T17:27:25.696Z",
+      "id": 14
     }
   ]
 }

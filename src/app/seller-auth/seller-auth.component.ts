@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { SellerService } from '../sevices/seller.service';
 import { Router } from '@angular/router'
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-seller-auth',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router'
   styleUrls: ['./seller-auth.component.scss']
 })
 export class SellerAuthComponent implements OnInit {
+
   sellerForm!: FormGroup;
   todaysDate: Date = new Date();
 
@@ -20,6 +22,7 @@ export class SellerAuthComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.sellerService.reloadSeller()
     this.buildCreateSellerForm();
   }
 
@@ -40,9 +43,11 @@ export class SellerAuthComponent implements OnInit {
 
 
   onSubmit() {
-    console.log(this.sellerForm.value)
+    // console.log(this.sellerForm.value)
     this.sellerService.userSignUp(this.sellerForm.value).subscribe((result) => {
-      if(result){
+      if (result) {
+        // console.log(result);
+        localStorage.setItem('seller', JSON.stringify(result))
         this.router.navigate(['seller-home'])
       }
     });
