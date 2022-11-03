@@ -40,7 +40,7 @@ export class SellerAuthComponent implements OnInit {
 
 
   onSubmit() {
-    // console.log(this.sellerForm.value)
+    console.log(this.sellerForm.value)
     this.sellerService.userSignUp(this.sellerForm.value).subscribe((result) => {
       if(result){
         this.router.navigate(['seller-home'])
