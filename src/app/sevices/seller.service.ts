@@ -16,16 +16,6 @@ export class SellerService {
     private router: Router
   ) { }
 
-  // userSignUp(data: SignUp) {
-  //   this.http
-  //   .post('http://localhost:3000/seller', data, { observe?: 'responce' })
-  //   .subscribe((result) =>{
-  //     console.warn('result',result)
-  //   });
-  //   return false
-  // }
-
-
   userSignUp(model: SignUp): Observable<SignUp> {
     const options = {
       headers: new HttpHeaders().append('Content-Type', 'application/json'),
