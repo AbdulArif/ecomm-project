@@ -25,7 +25,7 @@
         <!-- login Area -->
         <div *ngIf="showLogin" class="sign-up">
             <h1 class="sign-up"> Seller Login</h1>
-            <p>{{authError}}</p>
+            <p class="error-p">{{authError}}</p>
             <form class="common-form" [formGroup]="sellerLoginForm" (ngSubmit)="login()">
                 <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
                 <input class="form-input" type="password" placeholder="Enter password" formControlName="password">

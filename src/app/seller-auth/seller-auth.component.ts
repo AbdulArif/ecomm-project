@@ -71,6 +71,7 @@ export class SellerAuthComponent implements OnInit {
   }
 
   login() {
+    this.authError = ""
     this.sellerService.userLogin(this.sellerLoginForm.value).subscribe({
       next: (result: any) => {
         if (result && result.length) {
