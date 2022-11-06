@@ -17,6 +17,7 @@ export class SellerHomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.GetProducts()
   }
 ngOnDestroy(): void {
     if (this.getProductSub) {
