@@ -36,11 +36,11 @@ export class SellerService {
     const options = {
       headers: new HttpHeaders().append('Content-Type', 'application/json'),
       params: new HttpParams()
-      .append('email', model.email)
-      .append('password', model.password)
+        .append('email', model.email)
+        .append('password', model.password)
     }
     // this.isSellerLoggedIn.next(true)
-    return this.http.get<Login>(`${environment.apiUrl}/seller`, options);    
+    return this.http.get<Login>(`${environment.apiUrl}/seller`, options);
   }
 
 }
