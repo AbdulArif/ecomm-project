@@ -9,7 +9,7 @@ import { ProductService } from '../sevices/product.service';
 })
 export class SellerHomeComponent implements OnInit {
   getProductSub! : Subscription
-  products: any[] = []
+  productsList: any[] = []
 
 
   constructor(
@@ -29,8 +29,8 @@ ngOnDestroy(): void {
     this.getProductSub = this.productService.GetProducts().subscribe(
       {
         next: (response: any) => {
-          this.products = response;
-          console.log(this.products)
+          this.productsList = response;
+          console.log(this.productsList)
         },
         error: (error: any) => {
           // this.toastr.error('Failed to get Orders.', 'Error', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });

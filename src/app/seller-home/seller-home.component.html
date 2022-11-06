@@ -1,1 +1,35 @@
-<p>seller-home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <p-table [value]="productsList">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Color</th>
+                    <th>Description</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td> <img src="{{product.image}}"/> </td>
+                    <td> {{product.name}} </td>
+                    <td> {{product.price}} </td>
+                    <td> {{product.color}} </td>
+                    <td> {{product.description}} </td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+    </div>
+</body>
+</html>
