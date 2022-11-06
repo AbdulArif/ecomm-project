@@ -5,6 +5,41 @@
       "email": "abdulanis.dgp@gmail.com",
       "password": "Password@1",
       "id": 1
-    }    
+    },
+    {
+      "name": "Abdul Arif",
+      "email": "abdularif.dgp@gmail.com",
+      "password": "Password@1",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "name": "Samsung m40",
+      "price": "23000",
+      "color": "Black",
+      "category": "Mobile",
+      "image": "https://www.notebookcheck.net/uploads/tx_nbc2/SamsungGalaxyM40.JPG",
+      "description": "Good Product",
+      "id": 1
+    },
+    {
+      "name": "Asus Zenfone 9",
+      "price": "10000",
+      "color": "Black",
+      "category": "Mobile",
+      "description": "ASUS Zenfone 9, the 5.9” compact size is perfect for one-handed use and the flagship performance meets every possibility in your life.",
+      "image": "https://www.91-img.com/pictures/148961-v2-asus-zenfone-9-mobile-phone-large-1.jpg?tr=q-80",
+      "id": 2
+    },
+    {
+      "name": "poco m4 pro",
+      "price": "250000",
+      "color": "Blue",
+      "category": "Mobile",
+      "description": "4 GB RAM|64 GB ROM|6 GB RAM |8 GB RAM | 128 GB ROM | Expandable Upto 1 TB\n16.76 cm (6.6 inch) Full HD+ Display\n50MP + 8MP | 16MP Front Camera\n5000 mAh Lithium-ion Polymer Battery\nMediatek Dimensity 810 Processor\n",
+      "image": "https://mannaimart.com/wp-content/uploads/2022/02/poco-m4-pro-3.png",
+      "id": 3
+    }
   ]
 }
