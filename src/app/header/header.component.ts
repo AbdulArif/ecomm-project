@@ -8,7 +8,8 @@ import { Router } from '@angular/router'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  menuType: String ='default'
+  menuType: String = 'default'
+  sellerName: String = ''
 
   constructor(
     private router: Router
@@ -21,6 +22,11 @@ export class HeaderComponent implements OnInit {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           console.log("In seller area")
           this.menuType = "seller"
+          var sellerStore = localStorage.getItem('seller') 
+          if(sellerStore){
+            let sellerData = sellerStore && JSON.parse(sellerStore)[0]
+            this.sellerName = sellerData.name
+          }
         }
         else {
           console.log("OutSide seller area")
