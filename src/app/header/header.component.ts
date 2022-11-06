@@ -18,9 +18,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe((val: any) => {
       if (val.url) {
-        console.warn(val.url)
+        // console.warn(val.url)
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          console.log("In seller area")
+          // console.log("In seller area")
           this.menuType = "seller"
           var sellerStore = localStorage.getItem('seller') 
           if(sellerStore){
@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
           }
         }
         else {
-          console.log("OutSide seller area")
+          // console.log("OutSide seller area")
           this.menuType = "default"
         }
       }

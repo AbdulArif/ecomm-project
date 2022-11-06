@@ -20,11 +20,16 @@ export class SellerAddProductComponent implements OnInit {
   builAddProductForm() {
     this.addProductForm = this.formBuilder.group({
       name: ['', Validators.required],
+      price: ['', Validators.required],
+      color: ['', Validators.required],
+      category:'',
+      description:'',
+      image: ''
     })
   }
 
   onSubmit() {
-console.log(this.addProductForm.value)
+    console.log(this.addProductForm.value)
   }
 
 }

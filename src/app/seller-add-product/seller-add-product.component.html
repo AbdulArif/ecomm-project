@@ -12,8 +12,13 @@
 
     <div class="add-product"></div>
     <h1> ADD New Product</h1>
-    <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
-        <input class="form-input" type="text" placeholder="Enter Name" formControlName="name">
+    <form class="common-form" [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+        <input class="form-input" type="text" placeholder="Enter Product Name" formControlName="name">
+        <input class="form-input" type="text" placeholder="Enter Product Price" formControlName="price">
+        <input class="form-input" type="text" placeholder="Enter Product Color" formControlName="color">
+        <input class="form-input" type="text" placeholder="Enter Product Category" formControlName="category">
+        <textarea class="form-input" type="text" placeholder="Enter Product Description" formControlName="description"></textarea>
+        <input class="form-input" type="text" placeholder="Enter Product Image" formControlName="image">
 
     </form>
 </body>
