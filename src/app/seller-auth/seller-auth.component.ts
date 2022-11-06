@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { SellerService } from '../sevices/seller.service';
 import { Router } from '@angular/router'
@@ -10,7 +10,11 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./seller-auth.component.scss']
 })
 export class SellerAuthComponent implements OnInit {
+  isLoginError = new EventEmitter<boolean>(false)
+
+
   showLogin = true
+  authError = ''
   sellerForm!: FormGroup;
   sellerLoginForm!: FormGroup;
   todaysDate: Date = new Date();
@@ -67,15 +71,26 @@ export class SellerAuthComponent implements OnInit {
   }
 
   login() {
-    this.sellerService.userLogin(this.sellerLoginForm.value).subscribe((result: any) => {
-      if (result && result.length) {
-        console.log(result)
-        localStorage.setItem('seller', JSON.stringify(result))
-        this.router.navigate(['seller-home'])
+    this.sellerService.userLogin(this.sellerLoginForm.value).subscribe({
+      next: (result: any) => {
+        if (result && result.length) {
+          console.log(result)
+          localStorage.setItem('seller', JSON.stringify(result))
+          this.router.navigate(['seller-home'])
+        }
+        else {
+          this.isLoginError.emit(true)
+          this.authError = "Please Enter Correct Email and Password"
+          console.log("Please Enter Correct Email and Password")
+        }
+
+
+      },
+      error: (err) => {
+        console.log(err)
       }
-      else {
-        console.log("Please check Email and Password")
-      }
+
+
     })
   }
 }
