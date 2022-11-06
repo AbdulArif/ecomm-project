@@ -13,7 +13,6 @@ export class ProductService {
     private http: HttpClient,
   ) { }
 
-
   addProduct(model: Product): Observable<Product> {
     const options = {
       headers: new HttpHeaders().append('Content-Type', 'application/json'),
@@ -22,5 +21,12 @@ export class ProductService {
     return this.http.post<Product>(`${environment.apiUrl}/products`, model, options);
   }
 
+  GetProducts(): Observable<Product[]> {
+    const options = {
+      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+      params: new HttpParams()
+    }
+    return this.http.get<Product[]>(`${environment.apiUrl}/products`, options);
+  }
 
 }

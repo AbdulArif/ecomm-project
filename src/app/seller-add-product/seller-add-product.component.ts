@@ -9,6 +9,8 @@ import { ProductService } from '../sevices/product.service';
 })
 export class SellerAddProductComponent implements OnInit {
   addProductForm!: FormGroup
+  addProductMessage: string | undefined
+
   constructor(
     private formBuilder: UntypedFormBuilder,
     private productService: ProductService
@@ -33,7 +35,10 @@ export class SellerAddProductComponent implements OnInit {
   addProduct() {
     this.productService.addProduct(this.addProductForm.value).subscribe({
       next: (result: any) => {
-        console.log(result)
+        if (result) {
+          this.addProductMessage = "Product is successfully added"
+        }
+        setTimeout(() => this.addProductMessage = undefined, 3000)
       },
       error: (err) => { console.log(err) }
     })

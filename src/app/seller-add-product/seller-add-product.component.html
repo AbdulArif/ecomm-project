@@ -12,6 +12,7 @@
 
     <div class="add-product"></div>
     <h1> ADD New Product</h1>
+    <p class="message-p">{{addProductMessage}}</p>
     <form class="common-form" [formGroup]="addProductForm" (ngSubmit)="addProduct()">
         <input class="form-input" type="text" placeholder="Enter Product Name" formControlName="name">
         <input class="form-input" type="text" placeholder="Enter Product Price" formControlName="price">
