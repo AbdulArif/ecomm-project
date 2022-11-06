@@ -10,8 +10,9 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./seller-auth.component.scss']
 })
 export class SellerAuthComponent implements OnInit {
-
+  showLogin = true
   sellerForm!: FormGroup;
+  sellerLoginForm!: FormGroup;
   todaysDate: Date = new Date();
 
 
@@ -24,9 +25,8 @@ export class SellerAuthComponent implements OnInit {
   ngOnInit(): void {
     this.sellerService.reloadSeller()
     this.buildCreateSellerForm();
+    this.buildLoginSellerForm();
   }
-
-
 
   buildCreateSellerForm(): void {
     this.sellerForm = this.formBuilder.group({
@@ -41,6 +41,12 @@ export class SellerAuthComponent implements OnInit {
     });
   }
 
+  buildLoginSellerForm(): void {
+    this.sellerLoginForm = this.formBuilder.group({
+      password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
+      email: ['', [Validators.required, Validators.email]]
+    })
+  }
 
   onSubmit() {
     // console.log(this.sellerForm.value)
@@ -51,5 +57,25 @@ export class SellerAuthComponent implements OnInit {
         this.router.navigate(['seller-home'])
       }
     });
+  }
+
+  openLogin() {
+    this.showLogin = true
+  }
+  openSignup() {
+    this.showLogin = false
+  }
+
+  login() {
+    this.sellerService.userLogin(this.sellerLoginForm.value).subscribe((result: any) => {
+      if (result && result.length) {
+        console.log(result)
+        localStorage.setItem('seller', JSON.stringify(result))
+        this.router.navigate(['seller-home'])
+      }
+      else {
+        console.log("Please check Email and Password")
+      }
+    })
   }
 }

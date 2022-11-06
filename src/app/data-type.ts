@@ -6,3 +6,8 @@ export interface SignUp{
     addedDate: Date,
     updatedDate: Date
 }
+
+export interface Login{
+    email: string,
+    password: string
+}

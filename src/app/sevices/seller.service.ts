@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http'
-import { SignUp } from '../data-type';
+import { Login, SignUp } from '../data-type';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
@@ -42,5 +42,15 @@ export class SellerService {
     }
   }
 
+  userLogin(model: Login): Observable<Login> {
+    const options = {
+      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+      params: new HttpParams()
+      .append('email', model.email)
+      .append('password', model.password)
+    }
+    // this.isSellerLoggedIn.next(true)
+    return this.http.get<Login>(`${environment.apiUrl}/seller`, options);    
+  }
 
 }

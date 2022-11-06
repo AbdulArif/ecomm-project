@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <div class="seller-auth">
-        <div class="signup">
+        <!-- signUP  Area  -->
+        <div *ngIf="!showLogin" class="sign-up">
             <h1 class="sign-up"> Seller Sign-Up</h1>
-            <form class="common-form"  [formGroup]="sellerForm" (ngSubmit)="onSubmit()">
+            <form class="common-form" [formGroup]="sellerForm" (ngSubmit)="onSubmit()">
                 <input class="form-input" type="text" placeholder="Enter Name" formControlName="name">
-                <input class="form-input" type="password" placeholder="Enter password" formControlName="password">
                 <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
-                <button class="form-button">Signup</button>
+                <input class="form-input" type="password" placeholder="Enter password" formControlName="password">
+                <button class="form-button mb-2">Signup</button>
+                <a class="auth-toggle-link" (click)="openLogin()">Already Have Account ? Click to Login</a>
+            </form>
+        </div>
+        <!-- login Area -->
+        <div *ngIf="showLogin" class="sign-up">
+            <h1 class="sign-up"> Seller Login</h1>
+            <form class="common-form" [formGroup]="sellerLoginForm" (ngSubmit)="login()">
+                <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
+                <input class="form-input" type="password" placeholder="Enter password" formControlName="password">
+                <button class="form-button mb-2">Login</button>
+                <a class="auth-toggle-link" (click)="openSignup()">Don't Have Account ? Click to Sign-Up</a>
             </form>
         </div>
     </div>
-
 </body>
+
 </html>
