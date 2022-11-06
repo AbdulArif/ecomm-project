@@ -12,14 +12,14 @@
 
     <div class="add-product"></div>
     <h1> ADD New Product</h1>
-    <form class="common-form" [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+    <form class="common-form" [formGroup]="addProductForm" (ngSubmit)="addProduct()">
         <input class="form-input" type="text" placeholder="Enter Product Name" formControlName="name">
         <input class="form-input" type="text" placeholder="Enter Product Price" formControlName="price">
         <input class="form-input" type="text" placeholder="Enter Product Color" formControlName="color">
         <input class="form-input" type="text" placeholder="Enter Product Category" formControlName="category">
         <textarea class="form-input" type="text" placeholder="Enter Product Description" formControlName="description"></textarea>
         <input class="form-input" type="text" placeholder="Enter Product Image" formControlName="image">
-
+        <button class="form-button mb-2">Add Product</button>
     </form>
 </body>
 

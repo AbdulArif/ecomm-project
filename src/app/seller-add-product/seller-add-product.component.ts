@@ -21,15 +21,15 @@ export class SellerAddProductComponent implements OnInit {
     this.addProductForm = this.formBuilder.group({
       name: ['', Validators.required],
       price: ['', Validators.required],
-      color: ['', Validators.required],
+      color: '',
       category:'',
       description:'',
       image: ''
     })
   }
 
-  onSubmit() {
-    console.log(this.addProductForm.value)
+  addProduct() {
+    console.table(this.addProductForm.value)
   }
 
 }
