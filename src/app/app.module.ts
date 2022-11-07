@@ -14,6 +14,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import {AccordionModule} from 'primeng/accordion';
 import {MenuItem} from 'primeng/api';  
 import {TableModule} from 'primeng/table';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {TableModule} from 'primeng/table';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    TableModule
+    TableModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

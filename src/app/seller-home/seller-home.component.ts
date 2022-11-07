@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Subscription } from 'rxjs';
 import { ProductService } from '../sevices/product.service';
 
@@ -45,7 +46,6 @@ export class SellerHomeComponent implements OnInit {
   }
 
   deleteProduct(id: Number) {
-    // console.log(id)
     this.deleteProductSub = this.productService.DeleteProduct(id).subscribe({
         next: (response: any) => {
           console.log(response)
