@@ -29,4 +29,17 @@ export class ProductService {
     return this.http.get<Product[]>(`${environment.apiUrl}/products`, options);
   }
 
+  // DeleteProduct(id: any): Observable<any> {
+  //   const options = {
+  //     headers: new HttpHeaders().append('Content-Type', 'application/json'),
+  //     params: new HttpParams()
+  //     .append('id',id)
+  //   }
+  //   return this.http.delete<any>(`${environment.apiUrl}/products`, options);
+  // }
+
+  DeleteProduct(id:any){
+   return this.http.delete(`${environment.apiUrl}/products/${id}`)
+  }
+
 }

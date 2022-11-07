@@ -17,6 +17,7 @@
                     <th>Price</th>
                     <th>Color</th>
                     <th>Description</th>
+                    <th>Action</th>
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-product>
@@ -26,6 +27,7 @@
                     <td> {{product.price}} </td>
                     <td> {{product.color}} </td>
                     <td> {{product.description}} </td>
+                    <td> <button (click)="deleteProduct(product.id)">Delete</button> </td>
                 </tr>
             </ng-template>
         </p-table>
