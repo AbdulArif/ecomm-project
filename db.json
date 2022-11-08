@@ -15,15 +15,6 @@
   ],
   "products": [
     {
-      "name": "Samsung m40",
-      "price": "23000",
-      "color": "Black",
-      "category": "Mobile",
-      "image": "https://www.notebookcheck.net/uploads/tx_nbc2/SamsungGalaxyM40.JPG",
-      "description": "Good Product",
-      "id": 1
-    },
-    {
       "name": "Asus Zenfone 9",
       "price": "10000",
       "color": "Black",

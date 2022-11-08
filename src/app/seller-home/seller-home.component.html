@@ -27,7 +27,8 @@
                     <td> {{product.price}} </td>
                     <td> {{product.color}} </td>
                     <td> {{product.description}} </td>
-                    <td> <button (click)="deleteProduct(product.id)">Delete</button> </td>
+                    <td>      
+                        <button (click)="deleteProduct(product.id)">  <fa-icon [icon]="deleteIcon"></fa-icon> Delete</button> </td>
                 </tr>
             </ng-template>
         </p-table>

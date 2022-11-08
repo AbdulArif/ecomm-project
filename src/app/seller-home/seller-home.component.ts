@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
 import { ProductService } from '../sevices/product.service';
 
@@ -9,6 +9,7 @@ import { ProductService } from '../sevices/product.service';
   styleUrls: ['./seller-home.component.scss']
 })
 export class SellerHomeComponent implements OnInit {
+  deleteIcon = faTrash
   getProductSub!: Subscription
   deleteProductSub!: Subscription
   productsList: any[] = []
