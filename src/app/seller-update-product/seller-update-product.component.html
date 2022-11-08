@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <div class="add-product"></div>
+    <h1> Update Product</h1>
+    <!-- <p class="message-p">{{addProductMessage}}</p> -->
+    <form class="common-form" [formGroup]="updateProductForm" (ngSubmit)="updateProduct()">
+        <input class="form-input" type="text" placeholder="Enter Product Name" formControlName="name">
+        <input class="form-input" type="text" placeholder="Enter Product Price" formControlName="price">
+        <input class="form-input" type="text" placeholder="Enter Product Color" formControlName="color">
+        <input class="form-input" type="text" placeholder="Enter Product Category" formControlName="category">
+        <textarea class="form-input" type="text" placeholder="Enter Product Description" formControlName="description"></textarea>
+        <input class="form-input" type="text" placeholder="Enter Product Image" formControlName="image">
+        <button class="form-button mb-2">Update Product</button>
+    </form>
+</body>
+</html>

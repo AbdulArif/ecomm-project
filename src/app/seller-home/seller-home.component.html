@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div>
 
@@ -22,17 +24,22 @@
             </ng-template>
             <ng-template pTemplate="body" let-product>
                 <tr>
-                    <td> <img src="{{product.image}}"/> </td>
+                    <td> <img src="{{product.image}}" /> </td>
                     <td> {{product.name}} </td>
                     <td> {{product.price}} </td>
                     <td> {{product.color}} </td>
                     <td> {{product.description}} </td>
-                    <td>      
-                        <button (click)="deleteProduct(product.id)">  <fa-icon [icon]="deleteIcon"></fa-icon> Delete</button> </td>
+                    <td>
+                        <fa-icon (click)="deleteProduct(product.id)" [icon]="deleteIcon"></fa-icon>
+                        <a class="adjust-update-link" routerLink="/seller-update-product/{{product.id}}">
+                            <fa-icon [icon]="editIcon"></fa-icon>
+                        </a>
+                    </td>
                 </tr>
             </ng-template>
         </p-table>
 
     </div>
 </body>
+
 </html>
