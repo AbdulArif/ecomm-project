@@ -42,4 +42,13 @@ export class ProductService {
    return this.http.delete(`${environment.apiUrl}/products/${id}`)
   }
 
+  GetProductById(id: string): Observable<Product> {
+    const options = {
+      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+      params: new HttpParams()
+      .append('id',id)
+    }
+    return this.http.get<Product>(`${environment.apiUrl}/products`, options);
+  }
+
 }

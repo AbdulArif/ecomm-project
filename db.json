@@ -21,6 +21,15 @@
       "category": "Mobile",
       "description": "ASUS Zenfone 9, the 5.9” compact size is perfect for one-handed use and the flagship performance meets every possibility in your life.",
       "image": "https://www.91-img.com/pictures/148961-v2-asus-zenfone-9-mobile-phone-large-1.jpg?tr=q-80",
+      "id": 1
+    },
+    {
+      "name": "Samsung m40",
+      "price": "200000",
+      "color": "Blue",
+      "category": "Mobile",
+      "description": "Samsung m40",
+      "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-m40-1.jpg",
       "id": 2
     },
     {
