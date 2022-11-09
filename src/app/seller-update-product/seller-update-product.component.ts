@@ -11,7 +11,7 @@ export class SellerUpdateProductComponent implements OnInit {
   updateProductForm!: FormGroup
   constructor(
     private formBuilder : UntypedFormBuilder,
-    private cctivatedRoute : ActivatedRoute
+    private activatedRoute : ActivatedRoute
   ) { }
 
   ngOnInit(): void {
