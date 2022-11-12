@@ -77,7 +77,7 @@ export class SellerUpdateProductComponent implements OnInit {
     this.productService.updateProduct(this.productForm.value).subscribe({
       next: (res) => {
         // this.toastr.success('Workflow details saved!', 'Success', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
-        this.router.navigate(['about']);
+        this.router.navigate(['seller-home']);
       },
       error: (err) => {
         console.log(err)
