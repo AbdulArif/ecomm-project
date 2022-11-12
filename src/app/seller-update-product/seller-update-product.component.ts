@@ -12,7 +12,7 @@ import { ProductService } from '../sevices/product.service';
 })
 export class SellerUpdateProductComponent implements OnInit {
 
-  updateProductForm!: FormGroup;
+  productForm!: FormGroup;
   productId!: string | null;
   product!: Product;
 
@@ -27,11 +27,15 @@ export class SellerUpdateProductComponent implements OnInit {
     this.productId = this.activatedRoute.snapshot.paramMap.get('id')
     this.builAddProductForm()
     this.GetProductById()
-    this.updateProduct()
+  }
+  ngAfterViewInit(): void {
+    // this.GetProductById()
+    // this.builAddProductForm()
   }
 
+
   builAddProductForm() {
-    this.updateProductForm = this.formBuilder.group({
+    this.productForm = this.formBuilder.group({
       name: ['', Validators.required],
       price: ['', Validators.required],
       color: '',
@@ -39,34 +43,35 @@ export class SellerUpdateProductComponent implements OnInit {
       description: '',
       image: ''
     })
+    console.log(this.productForm.value)
   }
 
-  GetProductById() {
+   GetProductById() {
     this.productId && this.productService.GetProductById(this.productId).subscribe({
       next: (res: any) => {
         this.product = res
         this.viewProduct(this.product)
-        // console.log(res)
+        console.log(this.product)
       },
       error: (err) => { console.log(err) }
     })
   }
 
-  viewProduct(pro : any){
-    console.log(pro)
-    this.updateProductForm.patchValue({
-      id: pro.id,
-      name: pro.name,
-      price: pro.price,
+  viewProduct(pro: any) {
+    // console.log(pro)
+    this.productForm.patchValue({
+      id: pro[0].id,
+      name: pro[0].name,
+      price: this.product.price,
       color: pro.color,
       category: pro.category,
       description: pro.description,
       image: pro.image
     })
-    console.log(this.updateProductForm.value)
+    console.log(this.productForm.value)
   }
 
   updateProduct() {
-    
+
   }
 }

@@ -10,7 +10,7 @@
     <div class="add-product"></div>
     <h1> Update Product</h1>
     <!-- <p class="message-p">{{addProductMessage}}</p> -->
-    <form class="common-form" [formGroup]="updateProductForm" (ngSubmit)="updateProduct()">
+    <form class="common-form" [formGroup]="productForm" (ngSubmit)="updateProduct()">
         <input class="form-input" type="text" placeholder="Enter Product Name" formControlName="name">
         <input class="form-input" type="text" placeholder="Enter Product Price" formControlName="price">
         <input class="form-input" type="text" placeholder="Enter Product Color" formControlName="color">
