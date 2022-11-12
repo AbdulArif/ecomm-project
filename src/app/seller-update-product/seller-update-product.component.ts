@@ -15,7 +15,7 @@ export class SellerUpdateProductComponent implements OnInit {
   productForm!: FormGroup;
   productId!: string | null;
   product!: Product;
-
+  addStepSub!: Subscription
 
   constructor(
     private formBuilder: UntypedFormBuilder,
@@ -73,8 +73,7 @@ export class SellerUpdateProductComponent implements OnInit {
       // this.toastr.warning('Fill all the required fileds!', 'Warning', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
       return
     }
-    // this.addStepSub = 
-    this.productService.updateProduct(this.productForm.value).subscribe({
+    this.addStepSub = this.productService.updateProduct(this.productForm.value).subscribe({
       next: (res) => {
         // this.toastr.success('Workflow details saved!', 'Success', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
         this.router.navigate(['seller-home']);
