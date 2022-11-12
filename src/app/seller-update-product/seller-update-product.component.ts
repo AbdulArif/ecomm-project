@@ -28,11 +28,6 @@ export class SellerUpdateProductComponent implements OnInit {
     this.builAddProductForm()
     this.GetProductById()
   }
-  ngAfterViewInit(): void {
-    // this.GetProductById()
-    // this.builAddProductForm()
-  }
-
 
   builAddProductForm() {
     this.productForm = this.formBuilder.group({
