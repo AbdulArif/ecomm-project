@@ -16,6 +16,7 @@ import {MenuItem} from 'primeng/api';
 import {TableModule} from 'primeng/table';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
     ReactiveFormsModule,
     HttpClientModule,
     TableModule,
+    ToastrModule.forRoot(),
     FontAwesomeModule
   ],
   providers: [],

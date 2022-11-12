@@ -4,6 +4,8 @@ import {  Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Product } from '../data-type';
 import { ProductService } from '../sevices/product.service';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-seller-update-product',
@@ -21,6 +23,7 @@ export class SellerUpdateProductComponent implements OnInit {
     private formBuilder: UntypedFormBuilder,
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    private toastr: ToastrService,
     private productService: ProductService
   ) { }
 
@@ -75,12 +78,12 @@ export class SellerUpdateProductComponent implements OnInit {
     }
     this.addStepSub = this.productService.updateProduct(this.productForm.value).subscribe({
       next: (res) => {
-        // this.toastr.success('Workflow details saved!', 'Success', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
+        this.toastr.success('Product details saved!', 'Success', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
         this.router.navigate(['seller-home']);
       },
       error: (err) => {
         console.log(err)
-        // this.toastr.error("Failed to save!", 'Error', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
+        this.toastr.error("Failed to save!", 'Error', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
       }
     })
 

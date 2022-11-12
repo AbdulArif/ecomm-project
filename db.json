@@ -15,13 +15,13 @@
   ],
   "products": [
     {
+      "id": 1,
       "name": "Asus Zenfone 9",
       "price": "10000",
       "color": "Black",
       "category": "Mobile",
       "description": "ASUS Zenfone 9, the 5.9” compact size is perfect for one-handed use and the flagship performance meets every possibility in your life.",
-      "image": "https://www.91-img.com/pictures/148961-v2-asus-zenfone-9-mobile-phone-large-1.jpg?tr=q-80",
-      "id": 1
+      "image": "https://www.91-img.com/pictures/148961-v2-asus-zenfone-9-mobile-phone-large-1.jpg?tr=q-80"
     },
     {
       "name": "Samsung m40",
@@ -38,7 +38,7 @@
       "price": "100000",
       "color": "White",
       "category": "Mobile",
-      "description": "Best iphone",
+      "description": "Best iphone for ever",
       "image": "https://media.croma.com/image/upload/v1662655485/Croma%20Assets/Communication/Mobiles/Images/261971_c8p8eb.png"
     }
   ]
