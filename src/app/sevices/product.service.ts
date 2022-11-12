@@ -51,4 +51,12 @@ export class ProductService {
     return this.http.get<Product>(`${environment.apiUrl}/products`, options);
   }
 
+  updateProduct(model: Product): Observable<Product>{
+    const options = {
+      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+      params: new HttpParams()
+    }
+    return this.http.put<Product>(`${environment.apiUrl}/products/${model.id}`, model, options);
+  }
+
 }

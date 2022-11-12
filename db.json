@@ -33,13 +33,13 @@
       "id": 2
     },
     {
+      "id": 3,
       "name": "Samsung m40",
-      "price": "200000",
+      "price": "20",
       "color": "Blue",
       "category": "Mobile",
       "description": "Samsung m40",
-      "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-m40-1.jpg",
-      "id": 3
+      "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-m40-1.jpg"
     }
   ]
 }

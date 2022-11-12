@@ -12,6 +12,7 @@ export interface Login{
     password: string
 }
 export interface Product{
+    id: Number
     name: string
     price: string
     color: string

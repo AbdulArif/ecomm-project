@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import {  Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Product } from '../data-type';
 import { ProductService } from '../sevices/product.service';
@@ -20,6 +20,7 @@ export class SellerUpdateProductComponent implements OnInit {
   constructor(
     private formBuilder: UntypedFormBuilder,
     private activatedRoute: ActivatedRoute,
+    private router: Router,
     private productService: ProductService
   ) { }
 
@@ -31,6 +32,7 @@ export class SellerUpdateProductComponent implements OnInit {
 
   builAddProductForm() {
     this.productForm = this.formBuilder.group({
+      id: [Number, Validators.required],
       name: ['', Validators.required],
       price: ['', Validators.required],
       color: '',
@@ -38,35 +40,50 @@ export class SellerUpdateProductComponent implements OnInit {
       description: '',
       image: ''
     })
-    console.log(this.productForm.value)
+    // console.log(this.productForm.value)
   }
 
-   GetProductById() {
+  GetProductById() {
     this.productId && this.productService.GetProductById(this.productId).subscribe({
       next: (res: any) => {
         this.product = res
         this.viewProduct(this.product)
-        console.log(this.product)
+        // console.log(this.product)
       },
       error: (err) => { console.log(err) }
     })
   }
 
   viewProduct(pro: any) {
-    // console.log(pro)
     this.productForm.patchValue({
-      id: pro[0].id,
+      id: this.productId,
       name: pro[0].name,
-      price: this.product.price,
-      color: pro.color,
-      category: pro.category,
-      description: pro.description,
-      image: pro.image
+      price: pro[0].price,
+      color: pro[0].color,
+      category: pro[0].category,
+      description: pro[0].description,
+      image: pro[0].image
     })
-    console.log(this.productForm.value)
+    // console.log(this.productForm.value)
   }
 
   updateProduct() {
+    // console.log(this.productForm.value)
+    if (this.productForm.invalid) {
+      // this.toastr.warning('Fill all the required fileds!', 'Warning', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
+      return
+    }
+    // this.addStepSub = 
+    this.productService.updateProduct(this.productForm.value).subscribe({
+      next: (res) => {
+        // this.toastr.success('Workflow details saved!', 'Success', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
+        this.router.navigate(['about']);
+      },
+      error: (err) => {
+        console.log(err)
+        // this.toastr.error("Failed to save!", 'Error', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
+      }
+    })
 
   }
 }
