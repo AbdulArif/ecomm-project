@@ -78,12 +78,12 @@ export class SellerUpdateProductComponent implements OnInit {
     }
     this.addStepSub = this.productService.updateProduct(this.productForm.value).subscribe({
       next: (res) => {
-        this.toastr.success('Product details saved!', 'Success', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
+        // this.toastr.success('Product details saved!', 'Success', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
         this.router.navigate(['seller-home']);
       },
       error: (err) => {
         console.log(err)
-        this.toastr.error("Failed to save!", 'Error', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
+        // this.toastr.error("Failed to save!", 'Error', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
       }
     })
 
