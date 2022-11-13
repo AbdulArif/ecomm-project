@@ -17,29 +17,38 @@
     {
       "id": 1,
       "name": "Asus Zenfone 9",
-      "price": "10000",
+      "price": "₹10000",
       "color": "Black",
       "category": "Mobile",
       "description": "ASUS Zenfone 9, the 5.9” compact size is perfect for one-handed use and the flagship performance meets every possibility in your life.",
       "image": "https://www.91-img.com/pictures/148961-v2-asus-zenfone-9-mobile-phone-large-1.jpg?tr=q-80"
     },
     {
+      "id": 2,
       "name": "Samsung m40",
-      "price": "200000",
+      "price": "₹200000",
       "color": "Blue",
       "category": "Mobile",
       "description": "Samsung m40",
-      "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-m40-1.jpg",
-      "id": 2
+      "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-m40-1.jpg"
     },
     {
       "id": 3,
       "name": "Iphone 14",
-      "price": "100000",
+      "price": "₹100000",
       "color": "White",
       "category": "Mobile",
       "description": "Best iphone for ever",
       "image": "https://media.croma.com/image/upload/v1662655485/Croma%20Assets/Communication/Mobiles/Images/261971_c8p8eb.png"
+    },
+    {
+      "name": "ASUS ZenFone Max M2 (Black, 64 GB)  (4 GB RAM)",
+      "price": "₹14,999",
+      "color": "Black",
+      "category": "Mobile",
+      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 2 TB\n15.9 cm (6.26 inch) HD+ Display\n13MP + 2MP | 8MP Front Camera\n4000 mAh Battery\nQualcomm Snapdragon 632 Octa Core Processor",
+      "image": "https://rukminim1.flixcart.com/image/416/416/jp02t8w0/mobile/z/z/e/asus-zenfone-max-m2-zb632kl-4a004in-original-imafbcafmv6tgqjz.jpeg?q=70",
+      "id": 4
     }
   ]
 }

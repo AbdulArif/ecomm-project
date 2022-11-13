@@ -64,7 +64,7 @@ export class ProductService {
       headers: new HttpHeaders().append('Content-Type', 'application/json'),
       params: new HttpParams()
     }
-    return this.http.get<Product[]>(`${environment.apiUrl}/products?_limit=3`, options);
+    return this.http.get<Product[]>(`${environment.apiUrl}/products?_limit=4`, options);
   }
 
 }
