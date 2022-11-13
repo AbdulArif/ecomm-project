@@ -1,3 +1,4 @@
+import { query } from '@angular/animations';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -65,6 +66,14 @@ export class ProductService {
       params: new HttpParams()
     }
     return this.http.get<Product[]>(`${environment.apiUrl}/products?_limit=4`, options);
+  }
+
+  SearchProducts(): Observable<Product[]> {
+    const options = {
+      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+      params: new HttpParams()
+    }
+    return this.http.get<Product[]>(`${environment.apiUrl}/products?q=${query}`, options);
   }
 
 }
