@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
+import { Subscription } from 'rxjs';
+import { Product } from '../data-type';
+import { ProductService } from '../sevices/product.service';
 
 
 @Component({
@@ -10,17 +13,21 @@ import { Router } from '@angular/router'
 export class HeaderComponent implements OnInit {
   menuType: String = 'default'
   sellerName: String = ''
+  productsList!: Product[]
+  searchProducts!: Product[] 
+
+  getProductSub!: Subscription
 
   constructor(
-    private router: Router
+    private router: Router,
+    private productService: ProductService
   ) { }
 
   ngOnInit(): void {
+    // this.GetProducts()
     this.router.events.subscribe((val: any) => {
       if (val.url) {
-        // console.warn(val.url)
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          // console.log("In seller area")
           this.menuType = "seller"
           var sellerStore = localStorage.getItem('seller') 
           if(sellerStore){
@@ -36,9 +43,43 @@ export class HeaderComponent implements OnInit {
     })
   }
 
+  ngOnDestroy(): void {
+    if (this.getProductSub) {
+      this.getProductSub.unsubscribe();
+    }
+  }
+
   logOut(){
     localStorage.removeItem('seller')
     this.router.navigate(['/'])
+  }
+  // GetProducts() {
+  //   this.getProductSub = this.productService.GetProducts().subscribe({
+  //       next: (response: any) => {
+  //         this.productsList = response;
+  //         console.log(this.productsList)
+  //       },
+  //       error: (error: any) => {
+  //         // this.toastr.error('Failed to get Orders.', 'Error', { positionClass: 'toast-bottom-right', closeButton: true, progressBar: true, progressAnimation: 'decreasing' });
+  //       },
+  //       complete: () => {
+  //       }
+  //     }
+  //   );
+  // }
+
+  searchProduct(query: KeyboardEvent){
+    if(query){
+      const element = query.target as HTMLInputElement
+      this.productService.SearchProducts(element.value).subscribe((result)=>{
+        // console.log(result)
+        this.searchProducts = result
+      })
+    }
+  }
+
+  hideSearch(){
+    this.searchProducts =  []
   }
 
 }

@@ -68,7 +68,7 @@ export class ProductService {
     return this.http.get<Product[]>(`${environment.apiUrl}/products?_limit=4`, options);
   }
 
-  SearchProducts(): Observable<Product[]> {
+  SearchProducts(query: string): Observable<Product[]> {
     const options = {
       headers: new HttpHeaders().append('Content-Type', 'application/json'),
       params: new HttpParams()
