@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   menuType: String = 'default'
   sellerName: String = ''
   productsList!: Product[]
-  searchProducts!: Product[] 
+  searchProducts: Product[] | undefined
 
   getProductSub!: Subscription
 
@@ -79,7 +79,7 @@ export class HeaderComponent implements OnInit {
   }
 
   hideSearch(){
-    this.searchProducts =  []
+    this.searchProducts =  undefined
   }
 
 }
