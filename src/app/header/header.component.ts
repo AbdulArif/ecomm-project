@@ -29,8 +29,8 @@ export class HeaderComponent implements OnInit {
       if (val.url) {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           this.menuType = "seller"
-          var sellerStore = localStorage.getItem('seller') 
-          if(sellerStore){
+          var sellerStore = localStorage.getItem('seller')
+          if (sellerStore) {
             let sellerData = sellerStore && JSON.parse(sellerStore)[0]
             this.sellerName = sellerData.name
           }
@@ -49,7 +49,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  logOut(){
+  logOut() {
     localStorage.removeItem('seller')
     this.router.navigate(['/'])
   }
@@ -68,23 +68,23 @@ export class HeaderComponent implements OnInit {
   //   );
   // }
 
-  searchProduct(query: KeyboardEvent){
-    if(query){
+  searchProduct(query: KeyboardEvent) {
+    if (query) {
       const element = query.target as HTMLInputElement
-      this.productService.SearchProducts(element.value).subscribe((result)=>{
+      this.productService.SearchProducts(element.value).subscribe((result) => {
         this.searchProducts = result
-        if(result.length>5){
-          result.length =5
+        if (result.length > 5) {
+          result.length = 5
         }
       })
     }
   }
 
-  hideSearch(){
-    this.searchProducts =  undefined
+  hideSearch() {
+    this.searchProducts = undefined
   }
-  submitSearch(val: string){
-    // console.log(val)
+  submitSearch(val: string) {
+    this.router.navigate([`search/${val}`])
   }
 
 }
