@@ -83,5 +83,8 @@ export class HeaderComponent implements OnInit {
   hideSearch(){
     this.searchProducts =  undefined
   }
+  submitSearch(val: string){
+    // console.log(val)
+  }
 
 }
