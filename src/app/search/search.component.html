@@ -9,15 +9,15 @@
 </head>
 
 <body>
-    <div class="row search-item">
+    <div class="row search-item" *ngFor="let item of searchProducts">
         <div class="col-sm-3">
-            <img src="https://www.91-img.com/pictures/136302-v8-xiaomi-redmi-9-mobile-phone-large-1.jpg?tr=q-80" alt="">
+            <img src="{{item.image}}" alt="">
         </div>
         <div class="col-sm-8 details">
-            <h6> Product Name:</h6>
-            <p><b> price: 10000</b></p>
-            <p><span>Color: Red</span> <span>Category Mobile</span></p>
-            <p> A product searh UI</p>
+            <h6>{{item.name}}</h6>
+            <p><b> price: {{item.price}}</b></p>
+            <p><span>Color: {{item.color}}</span> <span>{{item.category}}</span></p>
+            <p> {{item.description}}</p>
         </div>
     </div>
 </body>
