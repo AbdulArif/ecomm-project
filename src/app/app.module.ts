@@ -19,6 +19,9 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './search/search.component';
+import {DataViewModule} from 'primeng/dataview';
+import {DropdownModule} from 'primeng/dropdown';
+
 
 
 @NgModule({
@@ -41,7 +44,9 @@ import { SearchComponent } from './search/search.component';
     TableModule,
     ToastrModule.forRoot(),
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    DataViewModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

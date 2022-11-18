@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SelectItem } from 'primeng/api';
 import { Product } from '../data-type';
 import { ProductService } from '../sevices/product.service';
 
@@ -12,6 +13,9 @@ import { ProductService } from '../sevices/product.service';
 export class SearchComponent implements OnInit {
   query!: string | null;
   searchProducts!: Product[];
+  sortOptions!: SelectItem[];
+  sortOrder!: number;
+  sortField!: string;
 
 
   constructor(
@@ -33,4 +37,17 @@ export class SearchComponent implements OnInit {
       error: (err) => { console.log(err) }
     })
   }
+
+  onSortChange(event: any) {
+    let value = event.target.value;
+
+    if (value.indexOf('!') === 0) {
+        this.sortOrder = -1;
+        this.sortField = value.substring(1, value.length);
+    }
+    else {
+        this.sortOrder = 1;
+        this.sortField = value;
+    }
+}
 }
