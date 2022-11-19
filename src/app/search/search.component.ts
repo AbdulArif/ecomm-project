@@ -24,6 +24,10 @@ export class SearchComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.sortOptions = [
+      { label: 'Price High to Low', value: '!price' },
+      { label: 'Price Low to High', value: 'price' }
+  ];
     this.query = this.activatedRoute.snapshot.paramMap.get('query')
     this.SearchProducts()
   }
@@ -39,6 +43,7 @@ export class SearchComponent implements OnInit {
   }
 
   onSortChange(event: any) {
+    console.log(event.target.value)
     let value = event.target.value;
 
     if (value.indexOf('!') === 0) {

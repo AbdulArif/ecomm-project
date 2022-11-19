@@ -94,6 +94,54 @@
       "description": "Training & Gym Shoes For Men  (Black)",
       "image": "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/z/1/z/-original-imagg6r9fxhxyhzr.jpeg?q=70",
       "id": 9
-    }
+    },
+    {
+      "id": 10,
+      "name": "Audio Technica ATH-M30x Professional Monitor Headphones Wired without Mic Headset  (Black, On the Ear)",
+      "price": "₹6,799",
+      "color": "BLACK",
+      "category": "Headphones",
+      "description": "Professional. Performance. The M-Series ATH-M30x professional monitor headphones combine modern engineering and high-quality materials to deliver a comfortable listening experience, with enhanced audio clarity and sound isolation. Tuned for highly detailed audio, with strong mid-range definition, these versatile monitoring headphones are ideal in a variety of situations. Designed primarily for studio tracking and mixing, they offer added features for increased portability, making them a great choice for field recording.",
+      "image": "https://rukminim1.flixcart.com/image/416/416/kc29n680/headphone/m/p/r/ath-m30x-professional-monitor-headphones-audio-technica-original-imaft9mfjfsyjfgs.jpeg?q=70"
+    },
+    {
+			"id": "1000",
+			"code": "f230fh0g3",
+			"name": "Bamboo Watch",
+			"description": "Product Description",
+			"image": "bamboo-watch.jpg",
+			"price": 65,
+      "color": "BLACK",
+			"category": "Accessories",
+			"quantity": 24,
+			"inventoryStatus": "INSTOCK",
+			"rating": 5
+		},
+    {
+			"id": "1001",
+			"code": "nvklal433",
+			"name": "Black Watch",
+			"description": "Product Description",
+			"image": "black-watch.jpg",
+			"price": 72,
+      "color": "BLACK",
+			"category": "Accessories",
+			"quantity": 61,
+			"inventoryStatus": "INSTOCK",
+			"rating": 4
+		},
+		{
+			"id": "1002",
+			"code": "zz21cz3c1",
+			"name": "Blue Band",
+			"description": "Product Description",
+			"image": "blue-band.jpg",
+			"price": 79,
+      "color": "BLACK",
+			"category": "Fitness",
+			"quantity": 2,
+			"inventoryStatus": "LOWSTOCK",
+			"rating": 3
+		}
   ]
 }
