@@ -21,6 +21,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './search/search.component';
 import {DataViewModule} from 'primeng/dataview';
 import {DropdownModule} from 'primeng/dropdown';
+import {PanelModule} from 'primeng/panel';
+import { RatingModule } from 'primeng/rating';
+import { ButtonModule } from 'primeng/button';
+import { TabViewModule } from 'primeng/tabview';
+import { InputTextModule } from 'primeng/inputtext'
 
 
 
@@ -46,7 +51,12 @@ import {DropdownModule} from 'primeng/dropdown';
     FontAwesomeModule,
     NgbModule,
     DataViewModule,
-    DropdownModule
+    DropdownModule,
+    PanelModule,
+    RatingModule,
+    ButtonModule,
+    TabViewModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
