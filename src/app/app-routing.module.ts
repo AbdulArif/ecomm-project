@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { HomeComponent } from './home/home.component';
 import { NoPageComponent } from './no-page/no-page.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path:'seller-add-product', component:SellerAddProductComponent, canActivate:[AuthGuard] },
   { path:'seller-update-product/:id', component:SellerUpdateProductComponent, canActivate:[AuthGuard] },
   { path:'search/:query', component:SearchComponent},
+  { path:'details/:productId', component:ProductDetailsComponent},
   { path:'**', component:NoPageComponent },
   
 ];

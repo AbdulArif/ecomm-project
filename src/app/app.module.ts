@@ -25,7 +25,8 @@ import {PanelModule} from 'primeng/panel';
 import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
 import { TabViewModule } from 'primeng/tabview';
-import { InputTextModule } from 'primeng/inputtext'
+import { InputTextModule } from 'primeng/inputtext';
+import { ProductDetailsComponent } from './product-details/product-details.component'
 
 
 
@@ -39,7 +40,8 @@ import { InputTextModule } from 'primeng/inputtext'
     SellerHomeComponent,
     SellerAddProductComponent,
     SellerUpdateProductComponent,
-    SearchComponent
+    SearchComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

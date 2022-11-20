@@ -105,43 +105,35 @@
       "image": "https://rukminim1.flixcart.com/image/416/416/kc29n680/headphone/m/p/r/ath-m30x-professional-monitor-headphones-audio-technica-original-imaft9mfjfsyjfgs.jpeg?q=70"
     },
     {
-			"id": "1000",
-			"code": "f230fh0g3",
-			"name": "Bamboo Watch",
-			"description": "Product Description",
-			"image": "https://media.croma.com/image/upload/v1662655485/Croma%20Assets/Communication/Mobiles/Images/261971_c8p8eb.png",
-			"price": 65,
+      "id": "1000",
+      "name": "Bamboo Watch",
+      "price": 65,
       "color": "BLACK",
-			"category": "Accessories",
-			"quantity": 24,
-			"inventoryStatus": "INSTOCK",
-			"rating": 5
-		},
+      "category": "Accessories",
+      "description": "Product Description",
+      "image": "https://rukminim1.flixcart.com/image/832/832/jgl5gnk0/watch/g/t/4/black25581-bobo-bird-original-imaf4sztvexubqz5.jpeg?q=70"
+    },
     {
-			"id": "1001",
-			"code": "nvklal433",
-			"name": "Black Watch",
-			"description": "Product Description",
-			"image": "https://www.danielwellington.com/product-images/DW00100415_Iconic_Li-WYiLBFVp.png?ecom2=true&format=jpg&canvas=1:1&width=600&quality=80&bg-color=FFFFFF",
-			"price": 72,
+      "id": "1001",
+      "code": "nvklal433",
+      "name": "Black Watch",
+      "description": "Product Description",
+      "image": "https://www.danielwellington.com/product-images/DW00100415_Iconic_Li-WYiLBFVp.png?ecom2=true&format=jpg&canvas=1:1&width=600&quality=80&bg-color=FFFFFF",
+      "price": 72,
       "color": "BLACK",
-			"category": "Accessories",
-			"quantity": 61,
-			"inventoryStatus": "INSTOCK",
-			"rating": 4
-		},
-		{
-			"id": "1002",
-			"code": "zz21cz3c1",
-			"name": "Blue Band",
-			"description": "Product Description",
-			"image": "https://www.danielwellington.com/product-images/DW00100415_Iconic_Li-WYiLBFVp.png?ecom2=true&format=jpg&canvas=1:1&width=600&quality=80&bg-color=FFFFFF",
-			"price": 79,
+      "category": "Accessories",
+      "quantity": 61,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4
+    },
+    {
+      "id": "1002",
+      "name": "Blue Band",
+      "price": 79,
       "color": "BLACK",
-			"category": "Fitness",
-			"quantity": 2,
-			"inventoryStatus": "LOWSTOCK",
-			"rating": 3
-		}
+      "category": "Fitness",
+      "description": "Product Description",
+      "image": "https://rukminim1.flixcart.com/image/416/416/kg6vfrk0/support/k/r/e/both-hand-support-sports-weightlifting-wristband-training-hand-original-imafwhe4xhvaa9t9.jpeg?q=70"
+    }
   ]
 }
