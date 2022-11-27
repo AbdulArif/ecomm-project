@@ -36,19 +36,10 @@
       "id": 3,
       "name": "Iphone 14",
       "price": "₹100000",
-      "color": "White",
+      "color": "Black",
       "category": "Mobile",
       "description": "Best iphone for ever",
       "image": "https://media.croma.com/image/upload/v1662655485/Croma%20Assets/Communication/Mobiles/Images/261971_c8p8eb.png"
-    },
-    {
-      "name": "ASUS ZenFone Max M2 (Black, 64 GB)  (4 GB RAM)",
-      "price": "₹14,999",
-      "color": "Black",
-      "category": "Mobile",
-      "description": "4 GB RAM | 64 GB ROM | Expandable Upto 2 TB\n15.9 cm (6.26 inch) HD+ Display\n13MP + 2MP | 8MP Front Camera\n4000 mAh Battery\nQualcomm Snapdragon 632 Octa Core Processor",
-      "image": "https://rukminim1.flixcart.com/image/416/416/jp02t8w0/mobile/z/z/e/asus-zenfone-max-m2-zb632kl-4a004in-original-imafbcafmv6tgqjz.jpeg?q=70",
-      "id": 4
     },
     {
       "name": "Stylish Casual Walking Comfortable Sports Running Shoes For Men  (Blue)",
@@ -108,7 +99,7 @@
       "id": "1000",
       "name": "Bamboo Watch",
       "price": 65,
-      "color": "BLACK",
+      "color": "Black",
       "category": "Accessories",
       "description": "Product Description",
       "image": "https://rukminim1.flixcart.com/image/832/832/jgl5gnk0/watch/g/t/4/black25581-bobo-bird-original-imaf4sztvexubqz5.jpeg?q=70"

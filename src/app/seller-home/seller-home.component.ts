@@ -47,7 +47,7 @@ export class SellerHomeComponent implements OnInit {
     );
   }
 
-  deleteProduct(id: Number) {
+  deleteProduct(id: number) {
     this.deleteProductSub = this.productService.DeleteProduct(id).subscribe({
         next: (response: any) => {
           console.log(response)

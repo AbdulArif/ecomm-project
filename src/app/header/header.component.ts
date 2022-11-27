@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   menuType: String = 'default'
   sellerName: String = ''
   productsList!: Product[]
-  searchProducts: Product[] | undefined
+  searchProducts!: Product[]
 
   getProductSub!: Subscription
 
@@ -73,6 +73,7 @@ export class HeaderComponent implements OnInit {
       const element = query.target as HTMLInputElement
       this.productService.SearchProducts(element.value).subscribe((result) => {
         this.searchProducts = result
+        console.log(this.searchProducts)
         if (result.length > 5) {
           result.length = 5
         }
@@ -81,10 +82,14 @@ export class HeaderComponent implements OnInit {
   }
 
   hideSearch() {
-    this.searchProducts = undefined
+    this.searchProducts = []
   }
   submitSearch(val: string) {
     this.router.navigate([`search/${val}`])
+  }
+
+  redirectToDetails(id: number) {
+    this.router.navigate(['/details/' + id])
   }
 
 }

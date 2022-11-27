@@ -4,8 +4,8 @@
         <input #searchInput type="text" placeholder="Search for Product" (keyup)="searchProduct($event)" (blur)="hideSearch()">
         <button (click)="submitSearch(searchInput.value)">Search</button>
         <ul class="suggested-result" *ngIf="searchProducts">
-            <li *ngFor="let item of searchProducts">
-                <a>{{item.name}}</a>
+            <li *ngFor="let item of searchProducts" (mousedown)="redirectToDetails(item.id!)">
+                {{item.name}}
             </li>
         </ul>
     </div>
