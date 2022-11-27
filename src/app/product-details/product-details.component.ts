@@ -10,12 +10,13 @@ import { Product } from '../data-type';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-productId = '' 
-productData!: Product
+  productId = ''
+  productData!: Product
+  productQuantity: number = 1
 
   constructor(
-    private activatedRoute : ActivatedRoute,
-    private productService : ProductService
+    private activatedRoute: ActivatedRoute,
+    private productService: ProductService
   ) { }
 
   ngOnInit(): void {
@@ -31,5 +32,14 @@ productData!: Product
       },
       error: (err) => { console.log(err) }
     })
+  }
+
+  handelQuantity(val: string) {
+    if (this.productQuantity < 20 && val === 'plus') {
+      this.productQuantity = this.productQuantity + 1
+    }
+    else if (this.productQuantity > 1 && val === 'min') {
+      this.productQuantity = this.productQuantity - 1
+    }
   }
 }
