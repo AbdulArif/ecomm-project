@@ -1,1 +1,30 @@
-<p>user-auth works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <!-- signUP  Area  -->
+        <div class="sign-up">
+            <h1 class="sign-up"> User Sign-Up</h1>
+            <form class="common-form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <!-- <form class="common-form"> -->
+                <input class="form-input" type="text" placeholder="Enter Name" formControlName="name">
+                <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
+                <input class="form-input" type="password" placeholder="Enter Password" formControlName="password">
+                <button class="form-button mb-2">Signup</button>
+                <!-- <a class="auth-toggle-link" (click)="openLogin()">Already Have Account ? Click to Login</a> -->
+            </form>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
