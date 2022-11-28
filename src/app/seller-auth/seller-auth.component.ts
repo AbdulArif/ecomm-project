@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
-import { SellerService } from '../sevices/seller.service';
+import { SellerService } from '../services/seller.service';
 import { Router } from '@angular/router'
 import { BehaviorSubject } from 'rxjs';
 

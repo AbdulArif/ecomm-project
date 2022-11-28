@@ -3,7 +3,7 @@ import { Form, FormBuilder, FormGroup, UntypedFormBuilder, Validators } from '@a
 import {  Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Product } from '../data-type';
-import { ProductService } from '../sevices/product.service';
+import { ProductService } from '../services/product.service';
 import { ToastrService } from 'ngx-toastr';
 
 

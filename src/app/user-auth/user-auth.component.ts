@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -13,6 +14,7 @@ export class UserAuthComponent implements OnInit {
 
   constructor(
     private formBuilder: UntypedFormBuilder,
+    private user: UserService
   ) { }
 
   ngOnInit(): void {

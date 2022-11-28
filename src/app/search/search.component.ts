@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SelectItem } from 'primeng/api';
 import { Product } from '../data-type';
-import { ProductService } from '../sevices/product.service';
+import { ProductService } from '../services/product.service';
 
 
 @Component({

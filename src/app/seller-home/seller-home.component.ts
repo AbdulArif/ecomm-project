@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
-import { ProductService } from '../sevices/product.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-seller-home',
