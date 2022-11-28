@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class UserAuthComponent implements OnInit {
 
   constructor(
     private formBuilder: UntypedFormBuilder,
-    private user: UserService
+    private router: Router,
+    private userService: UserService
   ) { }
 
   ngOnInit(): void {
@@ -35,7 +37,14 @@ export class UserAuthComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.userForm.value)
+    // console.log(this.userForm.value)
+    this.userService.UserSignUp(this.userForm.value).subscribe((result) => {
+      if (result) {
+        //console.log(result);
+        localStorage.setItem('user', JSON.stringify(result))
+        this.router.navigate(['/'])
+      }
+    });
   }
 
 }

@@ -128,5 +128,21 @@
     }
   ],
   "users": [
+    {
+      "name": "User Name",
+      "password": "Password@1",
+      "email": "user@gmail.com",
+      "addedDate": "2022-11-28T04:27:24.634Z",
+      "updatedDate": "2022-11-28T04:27:24.634Z",
+      "id": 1
+    },
+    {
+      "name": "Peter",
+      "password": "Password@1",
+      "email": "peter@gmail.com",
+      "addedDate": "2022-11-28T04:30:08.350Z",
+      "updatedDate": "2022-11-28T04:30:08.350Z",
+      "id": 2
+    }
   ]
 }
