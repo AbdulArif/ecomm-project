@@ -24,14 +24,13 @@
         </div>
 
         <!-- User Login  Area  -->
-        <div class="user-login">
+        <div class="sign-up">
             <h1 class="sign-up"> User Login</h1>
             <form class="common-form" [formGroup]="userLoginForm" (ngSubmit)="userLogin()">
                 <!-- <form class="common-form"> -->
-                <input class="form-input" type="text" placeholder="Enter Name" formControlName="name">
                 <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
                 <input class="form-input" type="password" placeholder="Enter Password" formControlName="password">
-                <button class="form-button mb-2">Signup</button>
+                <button class="form-button mb-2">Login</button>
                 <!-- <a class="auth-toggle-link" (click)="openLogin()">Already Have Account ? Click to Login</a> -->
             </form>
         </div>

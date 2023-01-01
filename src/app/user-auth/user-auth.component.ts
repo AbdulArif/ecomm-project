@@ -41,14 +41,8 @@ export class UserAuthComponent implements OnInit {
 
   buildLoginUserForm() {
     this.userLoginForm = this.formBuilder.group({
-      // userId: null,
-      name: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
       email: ['', [Validators.required, Validators.email]],
-      // addedBy: this.authenticationService.currentUserFirstName() + " " + this.authenticationService.currentUserLastName(),
-      addedDate: this.todaysDate.toISOString(),
-      // updatedBy: this.authenticationService.currentUserFirstName() + " " + this.authenticationService.currentUserLastName(),
-      updatedDate: this.todaysDate.toISOString()
     });
   }
 
@@ -63,8 +57,8 @@ export class UserAuthComponent implements OnInit {
     });
   }
 
-  userLogin(){
-
+  userLogin() {
+    console.log(this.userLoginForm.value)
   }
 
 }
