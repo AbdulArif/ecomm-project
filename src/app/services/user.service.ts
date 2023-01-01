@@ -23,4 +23,10 @@ export class UserService {
     //this.isSellerLoggedIn.next(true)
     return this.http.post<SignUp>(`${environment.apiUrl}/users`, model, options);
   }
+
+  UserAuthReload(){
+    if(localStorage.getItem('user')){
+      this.router.navigate(['/']);
+    }
+  }
 }

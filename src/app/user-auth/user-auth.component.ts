@@ -21,6 +21,7 @@ export class UserAuthComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildCreateUserForm();
+    this.userService.UserAuthReload();
   }
 
   buildCreateUserForm() {
