@@ -10,6 +10,7 @@ import { UserService } from '../services/user.service';
 })
 export class UserAuthComponent implements OnInit {
   userForm!: FormGroup;
+  userLoginForm!: FormGroup;
 
   todaysDate: Date = new Date();
 
@@ -21,11 +22,25 @@ export class UserAuthComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildCreateUserForm();
+    this.buildLoginUserForm();
     this.userService.UserAuthReload();
   }
 
   buildCreateUserForm() {
     this.userForm = this.formBuilder.group({
+      // userId: null,
+      name: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
+      email: ['', [Validators.required, Validators.email]],
+      // addedBy: this.authenticationService.currentUserFirstName() + " " + this.authenticationService.currentUserLastName(),
+      addedDate: this.todaysDate.toISOString(),
+      // updatedBy: this.authenticationService.currentUserFirstName() + " " + this.authenticationService.currentUserLastName(),
+      updatedDate: this.todaysDate.toISOString()
+    });
+  }
+
+  buildLoginUserForm() {
+    this.userLoginForm = this.formBuilder.group({
       // userId: null,
       name: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
@@ -46,6 +61,10 @@ export class UserAuthComponent implements OnInit {
         this.router.navigate(['/'])
       }
     });
+  }
+
+  userLogin(){
+
   }
 
 }
