@@ -16,6 +16,9 @@ export class HeaderComponent implements OnInit {
   productsList!: Product[]
   searchProducts!: Product[]
 
+  userName: String = ''
+
+
   getProductSub!: Subscription
 
   constructor(
@@ -34,6 +37,12 @@ export class HeaderComponent implements OnInit {
             let sellerData = sellerStore && JSON.parse(sellerStore)[0]
             this.sellerName = sellerData.name
           }
+          else if (localStorage.getItem('user')) {
+            let userStore = localStorage.getItem('user')
+            var userData = userStore && JSON.parse(userStore)
+            this.userName = userData.name
+            this.menuType = 'user'
+          }
         }
         else {
           // console.log("OutSide seller area")
@@ -51,6 +60,11 @@ export class HeaderComponent implements OnInit {
 
   logOut() {
     localStorage.removeItem('seller')
+    this.router.navigate(['/'])
+  }
+
+  userLogOut(){
+    localStorage.removeItem('user')
     this.router.navigate(['/'])
   }
   // GetProducts() {
