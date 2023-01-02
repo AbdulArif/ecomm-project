@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import { Login } from '../data-type';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -71,8 +72,8 @@ export class UserAuthComponent implements OnInit {
         console.log(result)
         if (result && result.length) {
           console.log(result)
-          localStorage.setItem('seller', JSON.stringify(result))
-          this.router.navigate(['seller-home'])
+          localStorage.setItem('user', JSON.stringify(result))
+          this.router.navigate(['/'])
         }
         else {
           // this.isLoginError.emit(true)
