@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { SignUp } from '../data-type';
+import { Login, SignUp } from '../data-type';
 
 @Injectable({
   providedIn: 'root'
@@ -29,4 +29,15 @@ export class UserService {
       this.router.navigate(['/']);
     }
   }
+  
+  userLogin(model: Login): Observable<Login> {
+    const options = {
+      headers: new HttpHeaders().append('Content-Type', 'application/json'),
+      params: new HttpParams()
+        .append('email', model.email)
+        .append('password', model.password)
+    }
+    return this.http.get<Login>(`${environment.apiUrl}/user`, options);
+  }
+
 }

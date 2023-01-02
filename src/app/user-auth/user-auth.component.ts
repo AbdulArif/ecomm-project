@@ -9,6 +9,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./user-auth.component.scss']
 })
 export class UserAuthComponent implements OnInit {
+  showLogin: boolean = true
   userForm!: FormGroup;
   userLoginForm!: FormGroup;
 
@@ -45,6 +46,12 @@ export class UserAuthComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
     });
   }
+  openLogin() {
+    this.showLogin = true
+  }
+  openSignup() {
+    this.showLogin = false
+  }
 
   onSubmit() {
     // console.log(this.userForm.value)
@@ -60,5 +67,28 @@ export class UserAuthComponent implements OnInit {
   userLogin() {
     console.log(this.userLoginForm.value)
   }
+
+
+  login() {
+    // this.authError = ""
+    this.userService.userLogin(this.userLoginForm.value).subscribe({
+      next: (result: any) => {
+        if (result && result.length) {
+          console.log(result)
+          localStorage.setItem('seller', JSON.stringify(result))
+          this.router.navigate(['seller-home'])
+        }
+        else {
+          // this.isLoginError.emit(true)
+          // this.authError = "Please Enter Correct Email and Password"
+          console.log("Please Enter Correct Email and Password")
+        }
+      },
+      error: (err) => {
+        console.log(err)
+      }
+    })
+  }
+
 
 }

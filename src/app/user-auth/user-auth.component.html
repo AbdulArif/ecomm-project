@@ -11,7 +11,7 @@
 <body>
     <div>
         <!-- User SignUP  Area  -->
-        <div class="sign-up">
+        <div *ngIf="!showLogin" class="sign-up">
             <h1 class="sign-up"> User Sign-Up</h1>
             <form class="common-form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
                 <!-- <form class="common-form"> -->
@@ -19,19 +19,19 @@
                 <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
                 <input class="form-input" type="password" placeholder="Enter Password" formControlName="password">
                 <button class="form-button mb-2">Signup</button>
-                <!-- <a class="auth-toggle-link" (click)="openLogin()">Already Have Account ? Click to Login</a> -->
+                <a class="auth-toggle-link" (click)="openLogin()">Already Have Account ? Click to Login</a>
             </form>
         </div>
 
         <!-- User Login  Area  -->
-        <div class="sign-up">
+        <div *ngIf="showLogin" class="sign-up">
             <h1 class="sign-up"> User Login</h1>
             <form class="common-form" [formGroup]="userLoginForm" (ngSubmit)="userLogin()">
                 <!-- <form class="common-form"> -->
                 <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
                 <input class="form-input" type="password" placeholder="Enter Password" formControlName="password">
                 <button class="form-button mb-2">Login</button>
-                <!-- <a class="auth-toggle-link" (click)="openLogin()">Already Have Account ? Click to Login</a> -->
+                <a class="auth-toggle-link" (click)="openSignup()">Don't Have Account ? Click to Sign-Up</a>
             </form>
         </div>
 
