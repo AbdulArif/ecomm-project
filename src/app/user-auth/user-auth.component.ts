@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { Login } from '../data-type';
@@ -11,10 +11,12 @@ import { UserService } from '../services/user.service';
 })
 export class UserAuthComponent implements OnInit {
   showLogin: boolean = true
+  authError = ""
   userForm!: FormGroup;
   userLoginForm!: FormGroup;
 
   todaysDate: Date = new Date();
+  invalidUserAuth = new EventEmitter<boolean>(false)
 
   constructor(
     private formBuilder: UntypedFormBuilder,
@@ -66,19 +68,20 @@ export class UserAuthComponent implements OnInit {
   }
 
   userLogin() {
-    // this.authError = ""
+    this.authError = ""
     this.userService.userLogin(this.userLoginForm.value).subscribe({
       next: (result: any) => {
-        console.log(result)
+        // console.log(result)
         if (result && result.length) {
-          console.log(result)
+          // console.log(result)
+          this.invalidUserAuth.emit(false)
           localStorage.setItem('user', JSON.stringify(result))
           this.router.navigate(['/'])
         }
         else {
-          // this.isLoginError.emit(true)
-          // this.authError = "Please Enter Correct Email and Password"
-          console.log("Please Enter Correct Email and Password")
+          this.invalidUserAuth.emit(true)
+          this.authError = "Please Enter Correct Email and Password"
+          //console.log("Please Enter Correct Email and Password")
         }
       },
       error: (err) => {
