@@ -24,12 +24,12 @@ export class UserService {
     return this.http.post<SignUp>(`${environment.apiUrl}/users`, model, options);
   }
 
-  UserAuthReload(){
-    if(localStorage.getItem('user')){
+  UserAuthReload() {
+    if (localStorage.getItem('user')) {
       this.router.navigate(['/']);
     }
   }
-  
+
   userLogin(model: Login): Observable<Login> {
     const options = {
       headers: new HttpHeaders().append('Content-Type', 'application/json'),
@@ -37,7 +37,7 @@ export class UserService {
         .append('email', model.email)
         .append('password', model.password)
     }
-    return this.http.get<Login>(`${environment.apiUrl}/user`, options);
+    return this.http.get<Login>(`${environment.apiUrl}/users`, options);
   }
 
 }

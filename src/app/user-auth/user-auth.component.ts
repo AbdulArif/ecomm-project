@@ -65,14 +65,10 @@ export class UserAuthComponent implements OnInit {
   }
 
   userLogin() {
-    console.log(this.userLoginForm.value)
-  }
-
-
-  login() {
     // this.authError = ""
     this.userService.userLogin(this.userLoginForm.value).subscribe({
       next: (result: any) => {
+        console.log(result)
         if (result && result.length) {
           console.log(result)
           localStorage.setItem('seller', JSON.stringify(result))
