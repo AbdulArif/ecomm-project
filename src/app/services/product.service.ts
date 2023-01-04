@@ -1,6 +1,6 @@
 import { query } from '@angular/animations';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Product, SignUp } from '../data-type';
@@ -9,6 +9,7 @@ import { Product, SignUp } from '../data-type';
   providedIn: 'root'
 })
 export class ProductService {
+cartData = new EventEmitter<Product[] | []>();
 
   constructor(
     private http: HttpClient,
@@ -85,8 +86,8 @@ export class ProductService {
       cartData = JSON.parse(localCart)
       cartData.push(data)
       localStorage.setItem('localCart',JSON.stringify(cartData))
-
     }
+    this.cartData.emit(cartData)
   }
 
 }

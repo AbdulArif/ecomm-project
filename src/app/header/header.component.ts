@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   sellerName: String = ''
   productsList!: Product[]
   searchProducts!: Product[]
-
+  cartItems = 0;
   userName: String = ''
 
 
@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
     private productService: ProductService
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     // this.GetProducts()
     this.router.events.subscribe((val: any) => {
       if (val.url) {
@@ -50,6 +50,7 @@ export class HeaderComponent implements OnInit {
         }
       }
     })
+   await this.getCartdata()
   }
 
   ngOnDestroy(): void {
@@ -57,13 +58,22 @@ export class HeaderComponent implements OnInit {
       this.getProductSub.unsubscribe();
     }
   }
-
+  async getCartdata() {
+    let cartData = localStorage.getItem('localCart')
+    if (cartData) {
+      var x = JSON.parse(cartData).length
+      this.cartItems = JSON.parse(cartData).length
+    }
+    this.productService.cartData.subscribe((item)=>{
+      this.cartItems = item.length
+    })
+  }
   logOut() {
     localStorage.removeItem('seller')
     this.router.navigate(['/'])
   }
 
-  userLogOut(){
+  userLogOut() {
     localStorage.removeItem('user')
     this.router.navigate(['/'])
   }
