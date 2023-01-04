@@ -61,12 +61,12 @@ export class HeaderComponent implements OnInit {
   async getCartdata() {
     let cartData = localStorage.getItem('localCart')
     if (cartData) {
-      var x = JSON.parse(cartData).length
       this.cartItems = JSON.parse(cartData).length
     }
     this.productService.cartData.subscribe((item)=>{
       this.cartItems = item.length
     })
+    console.log(this.cartItems)
   }
   logOut() {
     localStorage.removeItem('seller')
