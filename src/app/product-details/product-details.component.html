@@ -17,8 +17,8 @@
                 <button (click)="handelQuantity('plus')">+</button>
             </div>
             <div>
-                <button *ngIf="!removeCart" class="form-button me" (click)="addToCart()"> Add to Cart </button>
-                <button *ngIf="removeCart" class="form-button me" (click)="removeToCart(productData.id)"> Remove to Cart </button>
+                <button *ngIf="!removeCart" class="form-button me-2" (click)="addToCart()"> Add to Cart </button>
+                <button *ngIf="removeCart" class="form-button me-2" (click)="removeToCart(productData.id)"> Remove to Cart </button>
                 <button class="form-button"> Buy Now </button>
             </div>
         </div>
