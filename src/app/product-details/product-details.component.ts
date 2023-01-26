@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   productId = ''
   productData!: Product
   productQuantity: number = 1
+  removeCart = false
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -22,6 +23,7 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.productId = this.activatedRoute.snapshot.paramMap.get('productId') as string
     this.GetProductById()
+    this.getCartdata()
   }
 
   GetProductById() {
@@ -34,6 +36,24 @@ export class ProductDetailsComponent implements OnInit {
     })
   }
 
+  getCartdata() {
+    let cartData = localStorage.getItem('localCart')
+    if (this.productId && cartData) {
+      let items = JSON.parse(cartData)
+      items = items.filter((item: Product) => this.productId == item.id?.toString())
+      if (items.length) {
+        this.removeCart = true;
+      }
+      else {
+        this.removeCart = false;
+      }
+    }
+    // this.productService.cartData.subscribe((item)=>{
+    //   this.cartItems = item.length
+    // })
+    // console.log(this.cartItems)
+  }
+
   handelQuantity(val: string) {
     if (this.productQuantity < 20 && val === 'plus') {
       this.productQuantity = this.productQuantity + 1
@@ -42,17 +62,20 @@ export class ProductDetailsComponent implements OnInit {
       this.productQuantity = this.productQuantity - 1
     }
   }
-  AddToCart() {
+  addToCart() {
     if (this.productData) {
       this.productData.quantity = this.productQuantity
       if (!localStorage.getItem('user')) {
         this.productService.LocalAddToCart(this.productData)
-        // console.log(this.productData)
+        this.removeCart = true
       }
       else {
         console.log('else')
       }
     }
   }
-
+  removeToCart(productId: any) {
+    this.productService.removeItemFromCart(productId)
+    this.removeCart = false
+  }
 }
