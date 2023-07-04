@@ -11,120 +11,61 @@
       "email": "abdularif.dgp@gmail.com",
       "password": "Password@1",
       "id": 2
+    },
+    {
+      "name": "user test",
+      "password": "Password@1",
+      "email": "user@gmail.com",
+      "addedDate": "2023-07-02T16:45:42.950Z",
+      "updatedDate": "2023-07-02T16:45:42.950Z",
+      "id": 3
     }
   ],
   "products": [
     {
       "id": 1,
-      "name": "Asus Zenfone 9",
-      "price": "₹10000",
-      "color": "Black",
-      "category": "Mobile",
-      "description": "ASUS Zenfone 9, the 5.9” compact size is perfect for one-handed use and the flagship performance meets every possibility in your life.",
-      "image": "https://www.91-img.com/pictures/148961-v2-asus-zenfone-9-mobile-phone-large-1.jpg?tr=q-80"
+      "name": "Britannia Gobbles Bar Cake",
+      "price": "10",
+      "color": "Pink",
+      "category": "Cake",
+      "description": "Britannia Gobbles Bar Cake Fruity Fun, 110 gm.",
+      "image": "https://m.media-amazon.com/images/I/61n0fnxZhUL.jpg"
     },
     {
       "id": 2,
-      "name": "Samsung m40",
-      "price": "₹200000",
-      "color": "Blue",
-      "category": "Mobile",
-      "description": "Samsung m40",
-      "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-m40-1.jpg"
+      "name": "Britannia NutriChoice",
+      "price": "₹200",
+      "color": "Brown",
+      "category": "Biscuits",
+      "description": "Britannia NutriChoice Hi-Fibre Digestive Biscuits 1 kg",
+      "image": "https://www.jiomart.com/images/product/original/491373488/britannia-nutrichoice-hi-fibre-digestive-biscuits-1-kg-product-images-o491373488-p491373488-0-202209281320.jpg?im=Resize=(1000,1000)"
     },
     {
       "id": 3,
-      "name": "Iphone 14",
-      "price": "₹100000",
-      "color": "Black",
-      "category": "Mobile",
-      "description": "Best iphone for ever",
-      "image": "https://media.croma.com/image/upload/v1662655485/Croma%20Assets/Communication/Mobiles/Images/261971_c8p8eb.png"
+      "name": "Britannia Milk Bikis",
+      "price": "₹100",
+      "color": "Brown",
+      "category": "Biscuits",
+      "description": "Britannia Milk Bikis Milk Cream Biscuits, 200g",
+      "image": "https://webmerx.sgp1.cdn.digitaloceanspaces.com/gronest/product_images/1672242470.40023490-2_8-britannia-milk-bikis-biscuits.webp"
     },
     {
-      "name": "Stylish Casual Walking Comfortable Sports Running Shoes For Men  (Blue)",
-      "price": "229",
-      "color": "Blue",
-      "category": "Footwear ",
-      "description": "Stylish Casual Walking Comfortable Sports Running Shoes For Men  (Blue)",
-      "image": "https://rukminim1.flixcart.com/image/580/696/xif0q/shoe/d/x/3/-original-imagg6reus2zjth6.jpeg?q=50",
+      "id": 4,
+      "name": "Britannia BisCafe",
+      "price": "29",
+      "color": "Brown",
+      "category": "Biscuits ",
+      "description": "Britannia BisCafe - Super Thin Coffee Crackers, Sugar Sprinkled Biscuits, 100 gm",
+      "image": "https://www.bigbasket.com/media/uploads/p/l/40247767-2_1-britannia-biscafe-super-thin-coffee-crackers-sugar-sprinkled-biscuits.jpg"
+    },
+    {
+      "name": "Dairy Milk Silk",
+      "price": "100",
+      "color": "Black ",
+      "category": "Chocolate",
+      "description": "Any 3 Small Silk chocolate of your choice from Dairy Milk Silk Bubbly, Dairy Milk Silk Fruit & Nut, Dairy Milk Silk Oreo, Dairy Milk Silk Oreo Red Velvet, Dairy Milk Silk Hazelnut, Dairy Milk Silk Roast Almond, Dairy Milk Silk Mousse, and Dairy Milk Silk Plain Chocolate, and 4 Chocolates from Cadbury Dairy Milk.",
+      "image": "https://backoffice.cadburygifting.in/media/catalog/product/i/m/images_1500x1500_8_15.jpg?quality=50&fit=bounds&height=&width=",
       "id": 5
-    },
-    {
-      "name": "Premium Sports Shoes for Men Walking Shoes For Men  (Grey)",
-      "price": "300",
-      "color": "Grey",
-      "category": "Footwear ",
-      "description": "Premium Sports Shoes for Men Walking Shoes For Men  (Grey)\n",
-      "image": "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/f/p/n/-original-imagg4zgaacqnv8e.jpeg?q=70",
-      "id": 6
-    },
-    {
-      "name": "Exclusive Affordable Collection of Trendy & Stylish Sport Sneakers Shoes Running Shoes For Men  (Black)",
-      "price": "199",
-      "color": "Black",
-      "category": "Footwear ",
-      "description": "Exclusive Affordable Collection of Trendy & Stylish Sport Sneakers Shoes Running Shoes For Men  (Black)\n",
-      "image": "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/j/z/m/6-9273-6-world-wear-footwear-black-original-imagghh9cgkfmr2x-bb.jpeg?q=70",
-      "id": 7
-    },
-    {
-      "name": "Sports Running Shoes For Men  (Blue)",
-      "price": "199",
-      "color": "Blue",
-      "category": "Footwear ",
-      "description": "Sports Running Shoes For Men  (Blue)",
-      "image": "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/n/p/h/7-advnchr-41-nobelite-t-blue-original-imagct54mz3wzpwx-bb.jpeg?q=70",
-      "id": 8
-    },
-    {
-      "name": "Training & Gym Shoes For Men  (Black)",
-      "price": "249",
-      "color": "Black",
-      "category": "Footwear ",
-      "description": "Training & Gym Shoes For Men  (Black)",
-      "image": "https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/z/1/z/-original-imagg6r9fxhxyhzr.jpeg?q=70",
-      "id": 9
-    },
-    {
-      "id": 10,
-      "name": "Audio Technica ATH-M30x Professional Monitor Headphones Wired without Mic Headset  (Black, On the Ear)",
-      "price": "₹6,799",
-      "color": "BLACK",
-      "category": "Headphones",
-      "description": "Professional. Performance. The M-Series ATH-M30x professional monitor headphones combine modern engineering and high-quality materials to deliver a comfortable listening experience, with enhanced audio clarity and sound isolation. Tuned for highly detailed audio, with strong mid-range definition, these versatile monitoring headphones are ideal in a variety of situations. Designed primarily for studio tracking and mixing, they offer added features for increased portability, making them a great choice for field recording.",
-      "image": "https://rukminim1.flixcart.com/image/416/416/kc29n680/headphone/m/p/r/ath-m30x-professional-monitor-headphones-audio-technica-original-imaft9mfjfsyjfgs.jpeg?q=70"
-    },
-    {
-      "id": "1000",
-      "name": "Bamboo Watch",
-      "price": 65,
-      "color": "Black",
-      "category": "Accessories",
-      "description": "Product Description",
-      "image": "https://rukminim1.flixcart.com/image/832/832/jgl5gnk0/watch/g/t/4/black25581-bobo-bird-original-imaf4sztvexubqz5.jpeg?q=70"
-    },
-    {
-      "id": "1001",
-      "code": "nvklal433",
-      "name": "Black Watch",
-      "description": "Product Description",
-      "image": "https://www.danielwellington.com/product-images/DW00100415_Iconic_Li-WYiLBFVp.png?ecom2=true&format=jpg&canvas=1:1&width=600&quality=80&bg-color=FFFFFF",
-      "price": 72,
-      "color": "BLACK",
-      "category": "Accessories",
-      "quantity": 61,
-      "inventoryStatus": "INSTOCK",
-      "rating": 4
-    },
-    {
-      "id": "1002",
-      "name": "Blue Band",
-      "price": 79,
-      "color": "BLACK",
-      "category": "Fitness",
-      "description": "Product Description",
-      "image": "https://rukminim1.flixcart.com/image/416/416/kg6vfrk0/support/k/r/e/both-hand-support-sports-weightlifting-wristband-training-hand-original-imafwhe4xhvaa9t9.jpeg?q=70"
     }
   ],
   "users": [

@@ -1,5 +1,5 @@
 <nav class="nav">
-    <h1><a routerLink="/">E-Comm</a></h1>
+    <h1><a routerLink="/">Glossary</a></h1>
     <div *ngIf="menuType ==='default'" class="nav-search">
         <input #searchInput type="text" placeholder="Search for Product" (keyup)="searchProduct($event)" (blur)="hideSearch()">
         <button (click)="submitSearch(searchInput.value)">Search</button>

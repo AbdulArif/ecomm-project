@@ -15,9 +15,9 @@
             <ng-template pTemplate="header">
                 <tr>
                     <th>Image</th>
-                    <th>Name</th>
+                    <th>Product</th>
                     <th>Price</th>
-                    <th>Color</th>
+                    <!-- <th>Color</th> -->
                     <th>Description</th>
                     <th>Action</th>
                 </tr>
@@ -27,7 +27,7 @@
                     <td> <img src="{{product.image}}" /> </td>
                     <td> {{product.name}} </td>
                     <td> {{product.price}} </td>
-                    <td> {{product.color}} </td>
+                    <!-- <td> {{product.color}} </td> -->
                     <td> {{product.description}} </td>
                     <td>
                         <fa-icon (click)="deleteProduct(product.id)" [icon]="deleteIcon"></fa-icon>
