@@ -6,11 +6,11 @@
         <div class="details">
             <h1>{{productData.name}}</h1>
             <h3>Price : {{productData.price}}</h3>
-            <div> Color : 
+            <!-- <div> Color : 
                 <h5 [style.backgroundColor]="productData.color" class="product-color"></h5>
-            </div>
+            </div> -->
             <h5>Category : {{productData.category}} </h5>
-            <h6>Category : {{productData.category}} </h6>
+            <h6>Description : {{productData.description}} </h6>
             <div class="quantity-group">
                 <button (click)="handelQuantity('min')">-</button>
                 <input type="text" value="{{productQuantity}}" readonly>

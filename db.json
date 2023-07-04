@@ -32,15 +32,6 @@
       "image": "https://m.media-amazon.com/images/I/61n0fnxZhUL.jpg"
     },
     {
-      "id": 2,
-      "name": "Britannia NutriChoice",
-      "price": "₹200",
-      "color": "Brown",
-      "category": "Biscuits",
-      "description": "Britannia NutriChoice Hi-Fibre Digestive Biscuits 1 kg",
-      "image": "https://www.jiomart.com/images/product/original/491373488/britannia-nutrichoice-hi-fibre-digestive-biscuits-1-kg-product-images-o491373488-p491373488-0-202209281320.jpg?im=Resize=(1000,1000)"
-    },
-    {
       "id": 3,
       "name": "Britannia Milk Bikis",
       "price": "₹100",
@@ -59,13 +50,21 @@
       "image": "https://www.bigbasket.com/media/uploads/p/l/40247767-2_1-britannia-biscafe-super-thin-coffee-crackers-sugar-sprinkled-biscuits.jpg"
     },
     {
+      "id": 5,
       "name": "Dairy Milk Silk",
       "price": "100",
       "color": "Black ",
       "category": "Chocolate",
       "description": "Any 3 Small Silk chocolate of your choice from Dairy Milk Silk Bubbly, Dairy Milk Silk Fruit & Nut, Dairy Milk Silk Oreo, Dairy Milk Silk Oreo Red Velvet, Dairy Milk Silk Hazelnut, Dairy Milk Silk Roast Almond, Dairy Milk Silk Mousse, and Dairy Milk Silk Plain Chocolate, and 4 Chocolates from Cadbury Dairy Milk.",
-      "image": "https://backoffice.cadburygifting.in/media/catalog/product/i/m/images_1500x1500_8_15.jpg?quality=50&fit=bounds&height=&width=",
-      "id": 5
+      "image": "https://m.media-amazon.com/images/I/51wQg3GGwwL._SX679_.jpg"
+    },
+    {
+      "name": "Orion Real Strawberry",
+      "price": "10",
+      "category": "Cake",
+      "description": "Orion Real Strawberry Centre Filled Choco-Pie 28 g",
+      "image": "https://www.jiomart.com/images/product/original/492578786/orion-real-strawberry-centre-filled-choco-pie-336-g-pack-of-12-product-images-o492578786-p591057865-0-202203150919.jpg?im=Resize=(1000,1000)",
+      "id": 6
     }
   ],
   "users": [
