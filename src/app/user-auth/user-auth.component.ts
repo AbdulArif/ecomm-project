@@ -1,8 +1,9 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
-import { Login } from '../data-type';
+import { Login, Product } from '../data-type';
 import { UserService } from '../services/user.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -21,7 +22,8 @@ export class UserAuthComponent implements OnInit {
   constructor(
     private formBuilder: UntypedFormBuilder,
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private product:ProductService
   ) { }
 
   ngOnInit(): void {
@@ -89,6 +91,39 @@ export class UserAuthComponent implements OnInit {
       }
     })
   }
+
+  // localCartToRemoteCart(){
+  //   let data = localStorage.getItem('localCart');
+  //   let user = localStorage.getItem('user');
+  //   let userId= user && JSON.parse(user).id;
+  //   if(data){
+  //    let cartDataList:Product[]= JSON.parse(data);
+   
+  //    cartDataList.forEach((product:product, index)=>{
+  //      let cartData:cart={
+  //        ...product,
+  //        productId:product.id,
+  //        userId
+  //      }
+  //      delete cartData.id;
+  //      setTimeout(() => {
+  //        this.product.addToCart(cartData).subscribe((result)=>{
+  //          if(result){
+  //            console.warn("data is stored in DB");
+  //          }
+  //        })
+  //      }, 500);
+  //      if(cartDataList.length===index+1){
+  //        localStorage.removeItem('localCart')
+  //      }
+  //    })
+  //   }
+ 
+  //   setTimeout(() => {
+  //    this.product.getCartList(userId)
+  //   }, 2000);
+     
+  //  }
 
 
 }
