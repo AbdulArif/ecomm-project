@@ -19,6 +19,14 @@
       "addedDate": "2023-07-02T16:45:42.950Z",
       "updatedDate": "2023-07-02T16:45:42.950Z",
       "id": 3
+    },
+    {
+      "name": "Admin",
+      "password": "Password@1",
+      "email": "admin@gmail.com",
+      "addedDate": "2023-07-05T01:30:02.250Z",
+      "updatedDate": "2023-07-05T01:30:02.250Z",
+      "id": 4
     }
   ],
   "products": [
@@ -52,7 +60,7 @@
     {
       "id": 5,
       "name": "Dairy Milk Silk",
-      "price": "100",
+      "price": "200",
       "color": "Black ",
       "category": "Chocolate",
       "description": "Any 3 Small Silk chocolate of your choice from Dairy Milk Silk Bubbly, Dairy Milk Silk Fruit & Nut, Dairy Milk Silk Oreo, Dairy Milk Silk Oreo Red Velvet, Dairy Milk Silk Hazelnut, Dairy Milk Silk Roast Almond, Dairy Milk Silk Mousse, and Dairy Milk Silk Plain Chocolate, and 4 Chocolates from Cadbury Dairy Milk.",
