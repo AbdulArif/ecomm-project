@@ -33,3 +33,33 @@ export interface Product{
     inventoryStatus?:string;
     rating?:number;
 }
+
+export interface Cart{
+    name:string,
+    price:number,
+    category:string,
+    color:string,
+    image:string,
+    description:string,
+    id:number| undefined,
+    quantity:undefined | number,
+    productId:number,
+    userId:number
+  }
+
+  export interface PriceSummary{
+    price:number,
+    discount:number,
+    tax:number,
+    delivery:number,
+    total:number
+  }
+  
+  export interface Order {
+    email:string,
+    address:string,
+    contact:string,
+    totalPrice:number,
+    userId:string,
+    id:number|undefined
+  }
