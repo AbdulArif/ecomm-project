@@ -69,7 +69,8 @@ export class ProductDetailsComponent implements OnInit {
     //   if(!localStorage.getItem('user')){
     //     this.productService.LocalAddToCart(this.productData);
     //     this.removeCart=true
-    //   }else{
+    //   }
+    //else{
     //     let user = localStorage.getItem('user');
     //     let userId= user && JSON.parse(user).id;
     //     let cartData:Cart={
