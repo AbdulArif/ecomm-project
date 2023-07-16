@@ -43,8 +43,8 @@ export interface Cart{
     description:string,
     id:number| undefined,
     quantity:undefined | number,
-    productId:number,
-    userId:number
+    productId:number| undefined,
+    userId:number| undefined
   }
 
   export interface PriceSummary{
