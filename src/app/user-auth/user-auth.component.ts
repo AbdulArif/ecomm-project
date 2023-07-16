@@ -73,7 +73,7 @@ export class UserAuthComponent implements OnInit {
     this.authError = ""
     this.userService.userLogin(this.userLoginForm.value).subscribe({
       next: (result: any) => {
-        // console.log(result)
+        console.log(result)
         if (result && result.length) {
           // console.log(result)
           this.invalidUserAuth.emit(false)

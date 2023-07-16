@@ -71,24 +71,24 @@ export class ProductDetailsComponent implements OnInit {
         this.productService.LocalAddToCart(this.productData);
         this.removeCart = true
       }
-    else{
-        let user = localStorage.getItem('user');
-        let userId= user && JSON.parse(user).id;
-        console.log(userId)
-        let cartData:any ={
+      else {
+        let user: string | null = localStorage.getItem('user');
+        let userId = user && JSON.parse(user)[0].id;
+        // console.log(userId)
+        let cartData: any = {
           ...this.productData,
-          productId:this.productData.id,
+          productId: this.productData.id,
           userId
         }
-    //     delete cartData.id;
-    //     this.product.addToCart(cartData).subscribe((result: any)=>{
-    //       if(result){
-    //        this.product.getCartList(userId);
-    //        this.removeCart=true
-    //       }
-    //     })        
-      }  
-    } 
+        //     delete cartData.id;
+        //     this.product.addToCart(cartData).subscribe((result: any)=>{
+        //       if(result){
+        //        this.product.getCartList(userId);
+        //        this.removeCart=true
+        //       }
+        //     })        
+      }
+    }
   }
   removeToCart(productId: any) {
     this.productService.removeItemFromCart(productId)
