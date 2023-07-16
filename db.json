@@ -84,5 +84,19 @@
       "updatedDate": "2023-01-02T11:24:29.190Z",
       "id": 1
     }
+  ],
+  "cart": [
+    {
+      "name": "Britannia Gobbles Bar Cake",
+      "price": "10",
+      "color": "Pink",
+      "category": "Cake",
+      "description": "Britannia Gobbles Bar Cake Fruity Fun, 110 gm.",
+      "image": "https://m.media-amazon.com/images/I/61n0fnxZhUL.jpg",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 1,
+      "id": 2
+    }
   ]
 }

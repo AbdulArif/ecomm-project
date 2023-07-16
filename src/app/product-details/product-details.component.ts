@@ -80,13 +80,13 @@ export class ProductDetailsComponent implements OnInit {
           productId: this.productData.id,
           userId
         }
-        //     delete cartData.id;
-        //     this.product.addToCart(cartData).subscribe((result: any)=>{
-        //       if(result){
-        //        this.product.getCartList(userId);
-        //        this.removeCart=true
-        //       }
-        //     })        
+            delete cartData.id;
+            this.productService.AddToCart(cartData).subscribe((result: any)=>{
+              if(result){
+               this.productService.GetCartList(userId);
+               this.removeCart=true
+              }
+            })        
       }
     }
   }

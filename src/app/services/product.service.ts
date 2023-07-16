@@ -100,10 +100,10 @@ export class ProductService {
       this.cartData.emit(items)
     }
   }
-  addToCart(cartData: Cart) {
+  AddToCart(cartData: Cart) {
     return this.http.post(`${environment.apiUrl}/cart`, cartData);
   }
-  getCartList(userId: number) {
+  GetCartList(userId: number) {
     return this.http
       .get<Product[]>(`${environment.apiUrl}/cart?userId=` + userId, {
         observe: 'response',

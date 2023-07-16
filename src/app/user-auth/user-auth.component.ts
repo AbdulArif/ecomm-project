@@ -23,7 +23,7 @@ export class UserAuthComponent implements OnInit {
     private formBuilder: UntypedFormBuilder,
     private router: Router,
     private userService: UserService,
-    private product:ProductService
+    private product: ProductService
   ) { }
 
   ngOnInit(): void {
@@ -92,38 +92,38 @@ export class UserAuthComponent implements OnInit {
     })
   }
 
-  // localCartToRemoteCart(){
-  //   let data = localStorage.getItem('localCart');
-  //   let user = localStorage.getItem('user');
-  //   let userId= user && JSON.parse(user).id;
-  //   if(data){
-  //    let cartDataList:Product[]= JSON.parse(data);
-   
-  //    cartDataList.forEach((product:product, index)=>{
-  //      let cartData:cart={
-  //        ...product,
-  //        productId:product.id,
-  //        userId
-  //      }
-  //      delete cartData.id;
-  //      setTimeout(() => {
-  //        this.product.addToCart(cartData).subscribe((result)=>{
-  //          if(result){
-  //            console.warn("data is stored in DB");
-  //          }
-  //        })
-  //      }, 500);
-  //      if(cartDataList.length===index+1){
-  //        localStorage.removeItem('localCart')
-  //      }
-  //    })
-  //   }
- 
-  //   setTimeout(() => {
-  //    this.product.getCartList(userId)
-  //   }, 2000);
-     
-  //  }
+  localCartToRemoteCart() {
+    let data = localStorage.getItem('localCart');
+    let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user)[0].id;
+    if (data) {
+      let cartDataList: Product[] = JSON.parse(data);
+
+      cartDataList.forEach((product: Product, index) => {
+        let cartData: any = {
+          ...product,
+          productId: product.id,
+          userId
+        }
+        delete cartData.id;
+           setTimeout(() => {
+             this.product.AddToCart(cartData).subscribe((result)=>{
+               if(result){
+                 console.warn("data is stored in DB");
+               }
+             })
+           }, 500);
+           if(cartDataList.length===index+1){
+             localStorage.removeItem('localCart')
+           }
+      })
+    }
+
+    // setTimeout(() => {
+    //  this.product.getCartList(userId)
+    // }, 2000);
+
+  }
 
 
 }
