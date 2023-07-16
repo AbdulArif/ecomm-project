@@ -21,6 +21,7 @@ export interface Login{
 //     image: string
 // }
 export interface Product{
+    [x: string]: any;
     id?:number;
     code?:string;
     name?:string;

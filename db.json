@@ -133,6 +133,18 @@
       "productId": 3,
       "userId": 1,
       "id": 5
+    },
+    {
+      "name": "Britannia BisCafe",
+      "price": "29",
+      "color": "Brown",
+      "category": "Biscuits ",
+      "description": "Britannia BisCafe - Super Thin Coffee Crackers, Sugar Sprinkled Biscuits, 100 gm",
+      "image": "https://www.bigbasket.com/media/uploads/p/l/40247767-2_1-britannia-biscafe-super-thin-coffee-crackers-sugar-sprinkled-biscuits.jpg",
+      "quantity": 2,
+      "productId": 4,
+      "userId": 1,
+      "id": 6
     }
   ]
 }

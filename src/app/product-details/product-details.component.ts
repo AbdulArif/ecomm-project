@@ -14,6 +14,8 @@ export class ProductDetailsComponent implements OnInit {
   productData!: Product
   productQuantity: number = 1
   removeCart = false
+  cartData:Product|undefined;
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -30,7 +32,7 @@ export class ProductDetailsComponent implements OnInit {
     this.productService.GetProductById(this.productId).subscribe({
       next: (res: any) => {
         this.productData = res[0]
-        console.log(this.productData)
+        // console.log(this.productData)
       },
       error: (err) => { console.log(err) }
     })
@@ -47,6 +49,19 @@ export class ProductDetailsComponent implements OnInit {
       else {
         this.removeCart = false;
       }
+    }
+    let user = localStorage.getItem('user');
+    if (user) {
+      let userId = user && JSON.parse(user)[0].id;
+      this.productService.GetCartList(userId);
+      this.productService.cartData.subscribe((result) => {
+        let item = result.filter((item: any) => this.productId?.toString() === item.productId?.toString())
+        console.log(item)
+        if (item.length) {
+          this.cartData = item[0];
+          this.removeCart = true;
+        }
+      })
     }
     // this.productService.cartData.subscribe((item)=>{
     //   this.cartItems = item.length
@@ -80,13 +95,13 @@ export class ProductDetailsComponent implements OnInit {
           productId: this.productData.id,
           userId
         }
-            delete cartData.id;
-            this.productService.AddToCart(cartData).subscribe((result: any)=>{
-              if(result){
-               this.productService.GetCartList(userId);
-               this.removeCart=true
-              }
-            })        
+        delete cartData.id;
+        this.productService.AddToCart(cartData).subscribe((result: any) => {
+          if (result) {
+            this.productService.GetCartList(userId);
+            this.removeCart = true
+          }
+        })
       }
     }
   }
