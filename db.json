@@ -87,52 +87,16 @@
   ],
   "cart": [
     {
-      "name": "Britannia Gobbles Bar Cake",
-      "price": "10",
-      "color": "Pink",
-      "category": "Cake",
-      "description": "Britannia Gobbles Bar Cake Fruity Fun, 110 gm.",
-      "image": "https://m.media-amazon.com/images/I/61n0fnxZhUL.jpg",
+      "name": "Dairy Milk Silk",
+      "price": "200",
+      "color": "Black ",
+      "category": "Chocolate",
+      "description": "Any 3 Small Silk chocolate of your choice from Dairy Milk Silk Bubbly, Dairy Milk Silk Fruit & Nut, Dairy Milk Silk Oreo, Dairy Milk Silk Oreo Red Velvet, Dairy Milk Silk Hazelnut, Dairy Milk Silk Roast Almond, Dairy Milk Silk Mousse, and Dairy Milk Silk Plain Chocolate, and 4 Chocolates from Cadbury Dairy Milk.",
+      "image": "https://m.media-amazon.com/images/I/51wQg3GGwwL._SX679_.jpg",
       "quantity": 1,
-      "productId": 1,
+      "productId": 5,
       "userId": 1,
-      "id": 2
-    },
-    {
-      "name": "Britannia Gobbles Bar Cake",
-      "price": "10",
-      "color": "Pink",
-      "category": "Cake",
-      "description": "Britannia Gobbles Bar Cake Fruity Fun, 110 gm.",
-      "image": "https://m.media-amazon.com/images/I/61n0fnxZhUL.jpg",
-      "quantity": 1,
-      "productId": 1,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "Britannia Milk Bikis",
-      "price": "₹100",
-      "color": "Brown",
-      "category": "Biscuits",
-      "description": "Britannia Milk Bikis Milk Cream Biscuits, 200g",
-      "image": "https://webmerx.sgp1.cdn.digitaloceanspaces.com/gronest/product_images/1672242470.40023490-2_8-britannia-milk-bikis-biscuits.webp",
-      "quantity": 2,
-      "productId": 3,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "Britannia Milk Bikis",
-      "price": "₹100",
-      "color": "Brown",
-      "category": "Biscuits",
-      "description": "Britannia Milk Bikis Milk Cream Biscuits, 200g",
-      "image": "https://webmerx.sgp1.cdn.digitaloceanspaces.com/gronest/product_images/1672242470.40023490-2_8-britannia-milk-bikis-biscuits.webp",
-      "quantity": 2,
-      "productId": 3,
-      "userId": 1,
-      "id": 5
+      "id": 1
     },
     {
       "name": "Britannia BisCafe",
@@ -141,10 +105,10 @@
       "category": "Biscuits ",
       "description": "Britannia BisCafe - Super Thin Coffee Crackers, Sugar Sprinkled Biscuits, 100 gm",
       "image": "https://www.bigbasket.com/media/uploads/p/l/40247767-2_1-britannia-biscafe-super-thin-coffee-crackers-sugar-sprinkled-biscuits.jpg",
-      "quantity": 2,
+      "quantity": 1,
       "productId": 4,
       "userId": 1,
-      "id": 6
+      "id": 2
     }
   ]
 }

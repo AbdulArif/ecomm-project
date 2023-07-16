@@ -14,7 +14,7 @@ export class ProductDetailsComponent implements OnInit {
   productData!: Product
   productQuantity: number = 1
   removeCart = false
-  cartData:Product|undefined;
+  cartData!: any;
 
 
   constructor(
@@ -106,7 +106,22 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
   removeToCart(productId: any) {
-    this.productService.removeItemFromCart(productId)
-    this.removeCart = false
+    if (!localStorage.getItem('user')) {
+      this.productService.removeItemFromCart(productId);
+    } else {
+      console.warn("cartData", this.cartData);
+      if (this.cartData) {
+        this.productService.removeToCart(this.cartData.id)
+          .subscribe((result) => {
+            let user = localStorage.getItem('user');
+            let userId = user && JSON.parse(user).id;
+            if (userId) {
+              this.productService.GetCartList(userId);
+            }
+          });
+      }
+    }
+    this.removeCart = false;
   }
+  
 }
