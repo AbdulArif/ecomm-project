@@ -106,22 +106,22 @@ export class UserAuthComponent implements OnInit {
           userId
         }
         delete cartData.id;
-           setTimeout(() => {
-             this.product.AddToCart(cartData).subscribe((result)=>{
-               if(result){
-                 console.warn("data is stored in DB");
-               }
-             })
-           }, 500);
-           if(cartDataList.length===index+1){
-             localStorage.removeItem('localCart')
-           }
+        setTimeout(() => {
+          this.product.AddToCart(cartData).subscribe((result) => {
+            if (result) {
+              console.warn("data is stored in DB");
+            }
+          })
+        }, 500);
+        if (cartDataList.length === index + 1) {
+          localStorage.removeItem('localCart')
+        }
       })
     }
 
-    // setTimeout(() => {
-    //  this.product.getCartList(userId)
-    // }, 2000);
+    setTimeout(() => {
+      this.product.GetCartList(userId)
+    }, 2000);
 
   }
 

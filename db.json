@@ -97,6 +97,42 @@
       "productId": 1,
       "userId": 1,
       "id": 2
+    },
+    {
+      "name": "Britannia Gobbles Bar Cake",
+      "price": "10",
+      "color": "Pink",
+      "category": "Cake",
+      "description": "Britannia Gobbles Bar Cake Fruity Fun, 110 gm.",
+      "image": "https://m.media-amazon.com/images/I/61n0fnxZhUL.jpg",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "Britannia Milk Bikis",
+      "price": "₹100",
+      "color": "Brown",
+      "category": "Biscuits",
+      "description": "Britannia Milk Bikis Milk Cream Biscuits, 200g",
+      "image": "https://webmerx.sgp1.cdn.digitaloceanspaces.com/gronest/product_images/1672242470.40023490-2_8-britannia-milk-bikis-biscuits.webp",
+      "quantity": 2,
+      "productId": 3,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "Britannia Milk Bikis",
+      "price": "₹100",
+      "color": "Brown",
+      "category": "Biscuits",
+      "description": "Britannia Milk Bikis Milk Cream Biscuits, 200g",
+      "image": "https://webmerx.sgp1.cdn.digitaloceanspaces.com/gronest/product_images/1672242470.40023490-2_8-britannia-milk-bikis-biscuits.webp",
+      "quantity": 2,
+      "productId": 3,
+      "userId": 1,
+      "id": 5
     }
   ]
 }
