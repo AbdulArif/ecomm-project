@@ -11,12 +11,13 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  menuType: String = 'default'
-  sellerName: String = ''
+  menuType: string = 'default'
+  sellerName:string="";
   productsList!: Product[]
   searchProducts!: Product[]
   cartItems = 0;
-  userName: String = ''
+  userName:string="";
+
 
 
   getProductSub!: Subscription
