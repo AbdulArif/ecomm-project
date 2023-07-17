@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cart } from '../data-type';
 
 @Component({
   selector: 'app-cart-page',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-page.component.scss']
 })
 export class CartPageComponent implements OnInit {
+
+  cartData: Cart[] | undefined;
 
   constructor() { }
 
