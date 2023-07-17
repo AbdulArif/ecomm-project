@@ -27,7 +27,8 @@ import { ButtonModule } from 'primeng/button';
 import { TabViewModule } from 'primeng/tabview';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { UserAuthComponent } from './user-auth/user-auth.component'
+import { UserAuthComponent } from './user-auth/user-auth.component';
+import { CartPageComponent } from './cart-page/cart-page.component'
 
 
 
@@ -43,7 +44,8 @@ import { UserAuthComponent } from './user-auth/user-auth.component'
     SellerUpdateProductComponent,
     SearchComponent,
     ProductDetailsComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
