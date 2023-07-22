@@ -11,6 +11,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   { path:'', component:HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path:'details/:productId', component:ProductDetailsComponent},
   { path:'user-auth', component:UserAuthComponent},
   { path:'cart-page', component:CartPageComponent},
+  { path:'checkout', component:CheckoutComponent},
   { path:'**', component:NoPageComponent },
   
 ];
