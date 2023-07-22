@@ -30,6 +30,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component'
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -53,6 +54,7 @@ import { CheckoutComponent } from './checkout/checkout.component'
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     TableModule,
     ToastrModule.forRoot(),
